@@ -24,3 +24,19 @@ a {
 a:hover {
     color: #000;
 }
+hgroup {
+    display: block;
+    width: 90px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 5px 0 3px 10px;
+}
+hgroup:hover {
+    background: #ddd;
+    box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
+    -o-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
+    -webkit-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
+    -moz-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+}
