@@ -6,7 +6,8 @@
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
   <meta name="author" content="{{ site.author }}">
-
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
@@ -21,6 +22,7 @@
   <link href="{{ root_url }}/favicon.png" rel="icon">
   <link href="{{ root_url }}/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css">
   <link href="{{ root_url }}/stylesheets/watch.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="{{ root_url }}/stylesheets/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
   <script src="{{ root_url }}/javascripts/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
