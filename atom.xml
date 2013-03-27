@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-03-26T23:18:42-07:00</updated>
+  <updated>2013-03-27T00:26:51-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Rae Liu]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Blog for hackers?]]></title>
+    <link href="http://raejin.github.com/blog/2013/03/27/blog-for-hackers/"/>
+    <updated>2013-03-27T00:24:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/03/27/blog-for-hackers</id>
+    <content type="html"><![CDATA[<p>This will be a simple test.</p>
+
+<ul>
+<li>Hey</li>
+</ul>
+
+]]></content>
+  </entry>
   
 </feed>
