@@ -30,6 +30,9 @@ hgroup {
     height: 100px;
     margin: 0 auto;
     padding: 5px 0 3px 10px;
+    font-family: 'Averia Sans Libre', cursive;
+    font-size: 23px;
+    color: #333;
 }
 hgroup:hover {
     background: #ddd;
