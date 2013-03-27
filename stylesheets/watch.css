@@ -1,0 +1,26 @@
+/* General Settings */
+
+::selection {
+    background-color: #a05682;
+    color: #fff;
+}
+::-moz-selection {
+    background-color: #a05682;
+    color: #fff;
+}
+body {
+    font-size: 14px;
+    font-family: "lucida grande","lucida sans unicode",arial,sans-serif;
+    background: #eee;
+    cursor: default;
+}
+input, option, select {
+    font-size: 13px;
+}
+a {
+    color: #4b8d0b;
+    text-decoration: none;
+}
+a:hover {
+    color: #000;
+}
