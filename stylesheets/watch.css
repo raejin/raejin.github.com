@@ -1,5 +1,4 @@
 /* General Settings */
-
 ::selection {
     background-color: #a05682;
     color: #fff;
@@ -24,17 +23,43 @@ a {
 a:hover {
     color: #000;
 }
+nav ,hgroup h2 {
+    display: none;
+}
+/* Layout */
+
+#main { margin: 0 auto; }
+
+@media (min-width: 780px) {
+    #main { width: 777px; }
+}
+@media (max-width: 780px) {
+    #main { width: 90%; }
+}
+
+
+/* Header */
+header {
+    margin: 10px 0 0;
+}
 hgroup h1 {
+    font-family: 'Averia Sans Libre', cursive;
+    font-size: 23px;
+    line-height: 1.4;
+    margin: 0;
+}
+hgroup h1 a {
+    color: #000;
+}
+hgroup {
     display: block;
     width: 90px;
     height: 100px;
     margin: 0 auto;
     padding: 5px 0 3px 10px;
-    font-family: 'Averia Sans Libre', cursive;
-    font-size: 23px;
     color: #333;
 }
-hgroup h1:hover {
+hgroup:hover {
     background: #ddd;
     box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
     -o-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
@@ -42,4 +67,25 @@ hgroup h1:hover {
     -moz-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
     border-radius: 15px;
     cursor: pointer;
+}
+/* Post */
+.entry-title {
+    font-size: 25px;
+    font-family: 'lucida grande', 'Microsoft JhengHei', Helvetica, Arial, sans-serif, serif;
+    margin: 5px 0;
+}
+.entry-content p {
+    font-size: 15px;
+    line-height: 1.8em;
+    color: rgb(68, 68, 68);
+    text-shadow: 0 1px 1px #fff;
+}
+.meta {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
 }
