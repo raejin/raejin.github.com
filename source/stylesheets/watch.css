@@ -24,7 +24,7 @@ a {
 a:hover {
     color: #000;
 }
-hgroup {
+hgroup h1 {
     display: block;
     width: 90px;
     height: 100px;
@@ -34,7 +34,7 @@ hgroup {
     font-size: 23px;
     color: #333;
 }
-hgroup:hover {
+hgroup h1:hover {
     background: #ddd;
     box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
     -o-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
