@@ -69,6 +69,9 @@ hgroup:hover {
     cursor: pointer;
 }
 /* Post */
+.zhtw {
+    font-size: 15px;
+}
 .entry-title {
     font-size: 25px;
     font-family: 'lucida grande', 'Microsoft JhengHei', Helvetica, Arial, sans-serif, serif;
