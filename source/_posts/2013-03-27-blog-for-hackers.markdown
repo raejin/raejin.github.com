@@ -6,4 +6,17 @@ comments: true
 categories:
 - hack
 ---
-to be filled
+Why am I switching the blogging platform? It sounds like an annual routine that has been done over and over again in the blogging business. I remeber the first time I was introduced with Wordpress, awesome and highly customizable. Although it was a hassle to get things work with Wordpress, the urge to personalize my blog made me step out my comfort zone.
+
+This time is no different than the first time. The reason why I am switching is actually very silly. I've seen so many cool developers using Octopress to blog, and they made it look really awesome due to the fact that Octopress is easy to hack. Octopress claimed it inteded to be used by hackers only, since everything needs to be done in terminal with no exception. Its nature will potentially scare off regular users, so this makes using Octopress even cooler. Yeah, that's why I am switching, because I want to pretend that I am a cool hacker, which I am really not.
+
+Enough for my boring mumbling, let me tell you what I did in the past few hours.
+
+- Replace default code syntax highlighter to my favorite [Tomorrow Night theme](https://github.com/chriskempson/tomorrow-theme)
+- Clean up the default template
+- Learn the damn markdown
+- Host on GitHub page
+- Discover Hexo
+- Think about responsive design with regard to the blog
+
+This experience opens a door for me. Though I know getting this done is trivial, the process of learning will always lead to different chapters.
