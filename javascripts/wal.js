@@ -2,12 +2,11 @@ $(function() {
 
     var host = location.host;
 
-
     var headerLogoClick = function() {
         var hg = $('hgroup');
         console.log(hg.length);
         hg.on('click', function() {
-            window.location.href = host;
+            window.location.href = "http://" + host;
         });
     };
 
@@ -33,5 +32,4 @@ $(function() {
     headerLogoClick();
     externalLinks();
     removeGist();
-
 });
