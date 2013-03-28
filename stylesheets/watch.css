@@ -130,6 +130,13 @@ code, kbd, pre, li code {
     text-align: left;
     display: inline-block;
     margin: 0 auto;
+    font-size: 13px;
+}
+.botm li a {
+    color: #999;
+}
+.botm li a:hover {
+    color: #222;
 }
 .botm li {
     margin: 5px 0;
