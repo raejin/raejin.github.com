@@ -103,6 +103,13 @@ code, kbd, pre, li code {
 .entry-content {
     margin-bottom: 5em;
 }
+.entry-content li {
+    margin: 1em 0;
+    padding: 0 .5em;
+}
+.entry-content ul {
+    margin: 1.5em;
+}
 .entry-content p {
     font-size: 15px;
     line-height: 1.8em;
