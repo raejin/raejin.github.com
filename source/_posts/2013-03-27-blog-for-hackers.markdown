@@ -12,7 +12,7 @@ This time is no different than the first time. The reason why I am switching is 
 
 Enough for my boring mumbling, let me tell you what I did in the past few hours.
 
-- Replace default code syntax highlighter to my favorite [Tomorrow Night theme](https://github.com/chriskempson/tomorrow-theme)
+- Replace default code syntax highlighter with my favorite [Tomorrow Night theme](https://github.com/chriskempson/tomorrow-theme)
 - Clean up the default template
 - Learn the damn markdown
 - Host on GitHub page
