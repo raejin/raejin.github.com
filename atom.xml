@@ -4,7 +4,7 @@
   <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-03-27T13:56:41-07:00</updated>
+  <updated>2013-03-27T18:33:12-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -18,19 +18,23 @@
     <link href="http://raejin.github.com/blog/2013/03/13/blog-for-hackers/"/>
     <updated>2013-03-13T00:24:00-07:00</updated>
     <id>http://raejin.github.com/blog/2013/03/13/blog-for-hackers</id>
-    <content type="html"><![CDATA[<p>我一時之間也不知道該從何寫起，有些想法在腦海裡複誦久了反而不知道怎麼好好地用文字來表達。</p>
+    <content type="html"><![CDATA[<h1>我一時之間也不知道該從何寫起，有些想法在腦海裡複誦久了反而不知道怎麼好好地用文字來表達。</h1>
 
-<p>關於這個部落格，我想要將它定位成我學習寫程式的記錄，也算是為自己未來的事業開始打草稿。並不覺得我會變成怎樣出眾的人物，但我希望能夠留下些什麼，並且和我有同樣想法的人一起交流。我想要做的事情很多，但在那之前，我必須把我的草稿給打好。先把路給走好了，才能試試看可不可以飛。</p>
+<hr />
 
-<p>從國小就開始接觸網路，和矽谷長大的很多孩子一樣差不多年紀。但在這邊遇到和我同年紀的學生所擁有的經驗和我不能相比，我是從一個軟體沙漠國家來矽谷取經的學生。資質也不特別聰穎，總覺得很多電腦理論的東西學得很不上手，但是能夠在這樣的地方，和一群在這邊長大的人一起經歷還在熱潮上的「矽谷傳奇」是一件很特別的事情。</p>
+<h2>關於這個部落格，我想要將它定位成我學習寫程式的記錄，也算是為自己未來的事業開始打草稿。並不覺得我會變成怎樣出眾的人物，但我希望能夠留下些什麼，並且和我有同樣想法的人一起交流。我想要做的事情很多，但在那之前，我必須把我的草稿給打好。先把路給走好了，才能試試看可不可以飛。</h2>
 
-<p>這幾年矽谷也不再那麼囂張了，反而是舊金山南市場（SOMA）興起的創投熱正在發燒。每每去<code>Career Fair</code>都會看到許多正興起被看好的 Startup 正在如火如荼的招生，準備向它們下一個成長目標邁進。每天一睜開眼睛就可以搜尋到幾百個創投，他們正拿到第一筆資金開始準備找人才開始實行他們的創意。若最終仍是不成功，依然能夠帶著豐富的經驗到穩定的大公司謀求一職。總之，只要投入軟體這個產業，沒有餓不死的工程師。只有不敢衝的膽小鬼。</p>
+<h3>從國小就開始接觸網路，和矽谷長大的很多孩子一樣差不多年紀。但在這邊遇到和我同年紀的學生所擁有的經驗和我不能相比，我是從一個軟體沙漠國家來矽谷取經的學生。資質也不特別聰穎，總覺得很多電腦理論的東西學得很不上手，但是能夠在這樣的地方，和一群在這邊長大的人一起經歷還在熱潮上的「矽谷傳奇」是一件很特別的事情。</h3>
+
+<blockquote><p>這幾年矽谷也不再那麼囂張了，反而是舊金山南市場（SOMA）興起的創投熱正在發燒。每每去<code>Career Fair</code>都會看到許多正興起被看好的 Startup 正在如火如荼的招生，準備向它們下一個成長目標邁進。每天一睜開眼睛就可以搜尋到幾百個創投，他們正拿到第一筆資金開始準備找人才開始實行他們的創意。若最終仍是不成功，依然能夠帶著豐富的經驗到穩定的大公司謀求一職。總之，只要投入軟體這個產業，沒有餓不死的工程師。只有不敢衝的膽小鬼。</p></blockquote>
 
 <p>這也可能只是我看到片面的假象，我不懂的東西太多了，只能夠分享我有限的經驗和想像。就以這裡為起點來告訴自己，用一點一滴的經驗來累積我的實力，然後再來分享我拼出來的圖案。</p>
 
 <p>如果我有機會能夠和臺灣的大學生相遇，我希望他們能夠多多看看臺灣以外不同的世界。若你是資工的，就不要讓自己委身在不會進步的公司。軟體的魔力就是人力，GitHub 就是因為有一群熱衷於分享傑作的工程師才強大，每天都有不同的軟體工具因為不同所需而誕生，就是因為擁有幾萬個工程師一起集思廣益集力而成才能讓這個產業這麼蓬勃。Crowd computing 就是這樣的道理，不需要多了不起的電腦，只需要利用幾萬台電腦一點點的運算資源，要演算出一個很複雜的物理公式也就在眨眼之間。資訊需要開放交流才有力量，封閉不但讓你賺不到錢反而是讓社會舉足不前。</p>
 
 <p>但以我的能力我能說的事情太少了，現在我只能多看多作多學，<code>WATCH AND LEARN</code></p>
+
+<p><a href="http://raejin.com" title="WATCH AND LEARN">Test a link</a></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -56,7 +60,7 @@
 <span class='line-number'>22</span>
 <span class='line-number'>23</span>
 </pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
-</span><span class='line'>
+</span><span class='line'><span class="kn">import</span> <span class="nn">math</span>
 </span><span class='line'><span class="n">inputfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;test&#39;</span><span class="p">,</span> <span class="s">&#39;r&#39;</span><span class="p">)</span>
 </span><span class='line'><span class="n">outputfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&#39;test_result&#39;</span><span class="p">,</span> <span class="s">&#39;w&#39;</span><span class="p">)</span>
 </span><span class='line'>
@@ -110,6 +114,12 @@
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='py'><span class='line'><span class="k">print</span> <span class="s">&#39;I hate you let me test to see if there is any overflow issue out there so i have to clean up the mess in order to make things pretty&#39;</span>
 </span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div><script src='https://gist.github.com/5258085.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
 
 ]]></content>
   </entry>
