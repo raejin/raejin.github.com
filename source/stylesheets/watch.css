@@ -71,6 +71,21 @@ hgroup:hover {
 code, kbd, pre, li code {
     font-size: 13px;
 }
+/* Archive */
+.blog-archives-year {
+    font-size: 30px;
+    color: #555;
+    text-align: right;
+}
+#blog-archives h1 {
+    font-size: 1.8em;
+}
+#blog-archives time {
+    color: #777;
+    float:right;
+    margin-top: .5em;
+}
+
 /* Post */
 .entry-title {
     font-size: 25px;
@@ -93,8 +108,5 @@ code, kbd, pre, li code {
 /* Sidebar */
 .botm {
     text-align: center;
-}
-/* Footer */
-#footer {
-    text-align: center;
+    margin-bottom: 2em;
 }
