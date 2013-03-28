@@ -1,8 +1,16 @@
 $(function() {
 
-    var externalLinks = function() {
+    var host = location.host;
 
-        var host = location.host;
+    var headerLogoClick = function() {
+        var hg = $('hgroup');
+        console.log(hg.length);
+        hg.on('click', function() {
+            window.location.href = "http://" + host;
+        });
+    };
+
+    var externalLinks = function() {
 
         $('body').on('click', 'a', function(e){
             var href = this.href,
@@ -21,7 +29,7 @@ $(function() {
 
     };
 
+    headerLogoClick();
     externalLinks();
     removeGist();
-
 });
