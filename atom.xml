@@ -4,7 +4,7 @@
   <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-03-28T02:42:30-07:00</updated>
+  <updated>2013-03-28T04:23:30-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -18,7 +18,23 @@
     <link href="http://raejin.github.com/blog/2013/03/27/blog-for-hackers/"/>
     <updated>2013-03-27T18:43:00-07:00</updated>
     <id>http://raejin.github.com/blog/2013/03/27/blog-for-hackers</id>
-    <content type="html"><![CDATA[<p>to be filled</p>
+    <content type="html"><![CDATA[<p>Why am I switching the blogging platform? It sounds like an annual routine that has been done over and over again in the blogging business. I remeber the first time I was introduced with Wordpress, awesome and highly customizable. Although it was a hassle to get things work with Wordpress, the urge to personalize my blog made me step out my comfort zone.</p>
+
+<p>This time is no different than the first time. The reason why I am switching is actually very silly. I&#8217;ve seen so many cool developers using Octopress to blog, and they made it look really awesome due to the fact that Octopress is easy to hack. Octopress claimed it inteded to be used by hackers only, since everything needs to be done in terminal with no exception. Its nature will potentially scare off regular users, so this makes using Octopress even cooler. Yeah, that&#8217;s why I am switching, because I want to pretend that I am a cool hacker, which I am really not.</p>
+
+<p>Enough for my boring mumbling, let me tell you what I did in the past few hours.</p>
+
+<ul>
+<li>Replace default code syntax highlighter to my favorite <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Night theme</a></li>
+<li>Clean up the default template</li>
+<li>Learn the damn markdown</li>
+<li>Host on GitHub page</li>
+<li>Discover Hexo</li>
+<li>Think about responsive design with regard to the blog</li>
+</ul>
+
+
+<p>This experience opens a door for me. Though I know getting this done is trivial, the process of learning will always lead to different chapters.</p>
 ]]></content>
   </entry>
   
