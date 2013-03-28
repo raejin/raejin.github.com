@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: hack | WATCH AND LEARN]]></title>
+  <link href="http://raejin.github.com/blog/categories/hack/atom.xml" rel="self"/>
+  <link href="http://raejin.github.com/"/>
+  <updated>2013-03-28T00:18:11-07:00</updated>
+  <id>http://raejin.github.com/</id>
+  <author>
+    <name><![CDATA[Rae Liu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Blog for hackers?]]></title>
+    <link href="http://raejin.github.com/blog/2013/03/27/blog-for-hackers/"/>
+    <updated>2013-03-27T18:43:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/03/27/blog-for-hackers</id>
+    <content type="html"><![CDATA[<p>to be filled</p>
+]]></content>
+  </entry>
+  
+</feed>
