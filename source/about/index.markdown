@@ -12,4 +12,4 @@ I originally came from Taiwan and I have stayed at the Bay Area for 3 years. I h
 
 I love Web. It never stops evolving and developers continue to shape web development to its best practice. It doesn't entirely follow traditional software development pattern because it has its own rule. The fact that it has changed dramatically in 14 years keeps me excited. And I know this is where I belong.
 
-Although I know what I want to do, I still need to do my homework. I know this career path will always encourage me to learn. Thus, this blog is named after my passion for front-end development - WATCH AND LEARN.
+Although I know what I want to do, I still need to do my homework. I know this career path will always encourage me to learn. Thus, this blog is named after my passion for Web - WATCH AND LEARN.
