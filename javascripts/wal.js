@@ -13,8 +13,15 @@ $(function() {
                 e.preventDefault();
             }
         });
-    }
+    };
+
+    var removeGist = function() {
+
+        $('.gist').prevAll().remove();
+
+    };
 
     externalLinks();
+    removeGist();
 
 });
