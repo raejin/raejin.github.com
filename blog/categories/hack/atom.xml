@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hack | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/hack/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-03-28T04:31:24-07:00</updated>
+  <updated>2013-03-28T16:29:24-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -35,6 +35,25 @@
 
 
 <p>This experience opens a door for me. Though I know getting this done is trivial, the process of learning will always lead to different chapters.</p>
+
+<p>For those that would like to know <code>the syntax highlighter theme</code>, here is the demo. Notice that it does not entirely follow the syntax theming scheme in Tomorrow Night since the setup is a bit different. Also I haven't tested out all the coloring scheme yet, this is still under-development. However, feel free to <a href="https://gist.github.com/raejin/5267644">use it and modify the .css file</a> to make it better.</p>
+
+<p>```javascript demo.js
+var aTags = document.getElementsByTagName('a');
+for(var i = 0; i &lt; aTags.length; i++) {</p>
+
+<pre><code>aTags[i].onclick(function() {
+    var closureVar = i;
+    console.log(closureVar);
+});
+</code></pre>
+
+<p>}
+```</p>
+
+<p><div><script src='https://gist.github.com/465698.js'></script>
+<noscript><pre><code></code></pre></noscript></div>
+</p>
 ]]></content>
   </entry>
   
