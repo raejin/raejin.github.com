@@ -20,3 +20,17 @@ Enough for my boring mumbling, let me tell you what I did in the past few hours.
 - Think about responsive design with regard to the blog
 
 This experience opens a door for me. Though I know getting this done is trivial, the process of learning will always lead to different chapters.
+
+For those that would like to know `the syntax highlighter theme`, here is the demo. Notice that it does not entirely follow the syntax theming scheme in Tomorrow Night since the setup is a bit different. Also I haven't tested out all the coloring scheme yet, this is still under-development. However, feel free to [use it and modify the .css file](https://gist.github.com/raejin/5267644) to make it better.
+
+```javascript demo.js
+var aTags = document.getElementsByTagName('a');
+for(var i = 0; i < aTags.length; i++) {
+    aTags[i].onclick(function() {
+        var closureVar = i;
+        console.log(closureVar);
+    });
+}
+```
+
+{% gist 465698 %}

@@ -143,6 +143,10 @@ p pre code, li pre code {
   background: #1d1f21 !important;
   color: #ddd !important; }
 
+.line-pre {
+  white-space: pre;
+}
+
 .pre-code *::-moz-selection, html .gist .gist-file .gist-syntax .line-data pre *::-moz-selection, .highlight code *::-moz-selection {
   background: #373b41;
   color: inherit;
@@ -176,12 +180,11 @@ p pre code, li pre code {
   font-style: italic !important; }
 
 .pre-code .cp, html .gist .gist-file .gist-syntax .line-data pre .cp, .highlight code .cp {
-  color: #586e75 !important;
+  color: #c66 !important;
   font-style: italic !important; }
 
 .pre-code .c1, html .gist .gist-file .gist-syntax .line-data pre .c1, .highlight code .c1 {
-  color: #586e75 !important;
-  font-style: italic !important; }
+  color: #969896 !important; }
 
 .pre-code .cs, html .gist .gist-file .gist-syntax .line-data pre .cs, .highlight code .cs {
   color: #586e75 !important;
@@ -193,7 +196,7 @@ p pre code, li pre code {
   background: none !important; }
 
 .pre-code .k, html .gist .gist-file .gist-syntax .line-data pre .k, .highlight code .k {
-  color: #b294bb !important; }
+  color: #f0c674 !important; }
 
 .pre-code .kn, html .gist .gist-file .gist-syntax .line-data pre .kn, .highlight code .kn {
   color: #b294bb !important; }
@@ -268,7 +271,7 @@ p pre code, li pre code {
   color: #f0c674 !important; }
 
 .pre-code .nc, html .gist .gist-file .gist-syntax .line-data pre .nc, .highlight code .nc {
-  color: #d33682 !important; }
+  color: #81a2be !important; }
 
 .pre-code .no, html .gist .gist-file .gist-syntax .line-data pre .no, .highlight code .no {
   color: #b58900 !important; }
@@ -288,7 +291,7 @@ p pre code, li pre code {
   color: #ddd !important; }
 
 .pre-code .nt, html .gist .gist-file .gist-syntax .line-data pre .nt, .highlight code .nt {
-  color: #81a2be !important;
+  color: #c66 !important;
   font-weight: bold !important; }
 
 .pre-code .nx, html .gist .gist-file .gist-syntax .line-data pre .nx, .highlight code .nx {
@@ -367,7 +370,8 @@ pre::-webkit-scrollbar-thumb:horizontal, .highlight::-webkit-scrollbar-thumb:hor
   border-radius: 4px; }
 
 .highlight code {
-  background: #000; }
+  background: #000;
+  white-space: pre; }
 
 figure.code {
   background: #111;
@@ -419,4 +423,5 @@ figure.code .highlight {
   text-decoration: underline; }
 
 .file-data {
-  background: #1d1f21; }
+  background: #1d1f21;
+  overflow-x: auto; }
