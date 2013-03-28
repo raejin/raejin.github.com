@@ -2,6 +2,10 @@
 .highlight,html .gist .gist-file .gist-syntax .line-data{
     /*border:1px solid #05232b !important;*/
 }
+.gist .gist-file .gist-data .line-numbers .line-number {
+    display: block;
+    clear: right;
+}
 .highlight table td.code,html .gist .gist-file .gist-syntax .line-data table td.code{
     width:100%;
 }

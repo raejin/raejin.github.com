@@ -69,13 +69,13 @@ hgroup:hover {
     cursor: pointer;
 }
 /* Post */
-.zhtw {
-    font-size: 15px;
-}
 .entry-title {
     font-size: 25px;
     font-family: 'lucida grande', 'Microsoft JhengHei', Helvetica, Arial, sans-serif, serif;
     margin: 5px 0;
+}
+.entry-content {
+    margin-bottom: 5em;
 }
 .entry-content p {
     font-size: 15px;
