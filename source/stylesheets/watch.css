@@ -31,16 +31,16 @@ nav ,hgroup h2 {
 #main { margin: 0 auto; }
 
 @media (min-width: 780px) {
-    #main { width: 777px; }
+    #main, header { width: 777px; }
 }
 @media (max-width: 780px) {
-    #main { width: 90%; }
+    #main, header { width: 90%; }
 }
 
 
 /* Header */
 header {
-    margin: 10px 0 0;
+    margin: 10px auto 0;
 }
 hgroup h1 {
     font-family: 'Averia Sans Libre', cursive;
@@ -107,6 +107,15 @@ code, kbd, pre, li code {
 }
 /* Sidebar */
 .botm {
-    text-align: center;
-    margin-bottom: 2em;
+    float: right;
+    margin-top: .3em;
+}
+.botm ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+}
+.botm li {
+    margin: 5px 0;
 }
