@@ -13,11 +13,11 @@
     text-align:right;
     font-size:13px;
     line-height:1.45em;
-    background:#111;
+    background:#000;
     /*border-right:1px solid #00232c !important;*/
-    -webkit-box-shadow:#083e4b -1px 0 inset;
-    -moz-box-shadow:#083e4b -1px 0 inset;
-    box-shadow:#083e4b -1px 0 inset;
+    /*-webkit-box-shadow:#083e4b -1px 0 inset;
+    -moz-box-shadow:#083e4b -1px 0 inset;*/
+    /*box-shadow:#083e4b -1px 0 inset;*/
     /*text-shadow:#021014 0 -1px;*/
     padding:.8em !important;
     -webkit-border-radius:0;
@@ -43,10 +43,11 @@ figure.code .highlight pre,.gist-file .highlight pre,pre .highlight pre {
 }
 
 html .gist .gist-file {
-    margin-bottom:1.8em;
+    /*margin-bottom:1.8em;*/
     position:relative;
     border:none;
     padding-top:26px !important;
+
 }
 
 html .gist .gist-file .gist-syntax {
@@ -59,16 +60,17 @@ html .gist .gist-file .gist-syntax .line-data {
 }
 
 html .gist .gist-file .gist-meta {
-    padding:.6em 0.8em;
-    border:1px solid #083e4b !important;
-    color:#586e75;
-    font-size:.7em !important;
-    background:#073642 url('/images/noise.png?1346949399') top left;
-    line-height:1.5em;
+    padding:.5em 0.8em;
+    margin-bottom: 1.8em;
+    color:#444;
+    font-size:13px !important;
+    background:#111;
+    border-radius: 0 0 5px 5px;
+    text-align: right;
 }
 
 html .gist .gist-file .gist-meta a {
-    color:#75878b !important;
+    color:#888 !important;
     text-decoration:none;
 }
 
@@ -76,16 +78,12 @@ html .gist .gist-file .gist-meta a:hover {
     text-decoration:underline;
 }
 
-html .gist .gist-file .gist-meta a:hover {
-    color:#93a1a1 !important;
-}
-
 html .gist .gist-file .gist-meta a[href*='#file']{
     position:absolute;
     top:0;
     left:0;
     right:-10px;
-    color:#474747 !important;
+    color:#999 !important;
 }
 
 pre, tr, td {
@@ -94,11 +92,11 @@ pre, tr, td {
 }
 
 .mono,pre,code,tt,p code,li code {
-    font-family:'Courier New','Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro',monospace;
+    font-family:'Consolas','Monaco','Menlo','Ubuntu Mono','source-code-pro',monospace;
 }
 
 html .gist .gist-file .gist-meta a[href*='#file']:hover{
-    color:#1863a1 !important;
+    color:#eee !important;
 }
 
 html .gist .gist-file .gist-meta a[href*=raw] {
@@ -151,7 +149,7 @@ p pre code,li pre code {
     border:none;
 }
 .pre-code,html .gist .gist-file .gist-syntax .line-data pre,.gist .gist-file .gist-data .line-pre,.highlight code {
-    font-family:"Courier New",Menlo,Monaco,"Andale Mono","lucida console",monospace !important;
+    font-family:"Consolas",Menlo,Monaco,"Andale Mono","lucida console",monospace !important;
     overflow:scroll;
     overflow-y:hidden;
     display:block;
@@ -228,8 +226,7 @@ p pre code,li pre code {
     font-weight:bold !important;
 }
 .pre-code .gd,html .gist .gist-file .gist-syntax .line-data pre .gd,.highlight code .gd {
-    color:#93a1a1 !important;
-    background-color:#372c34 !important;
+    color:#c82829 !important;
     display:inline-block;
 }
 .pre-code .gd .x,html .gist .gist-file .gist-syntax .line-data pre .gd .x,.highlight code .gd .x {
@@ -245,13 +242,11 @@ p pre code,li pre code {
     color:#586e75 !important;
 }
 .pre-code .gi,html .gist .gist-file .gist-syntax .line-data pre .gi,.highlight code .gi {
-    color:#93a1a1 !important;
-    background-color:#1a412b !important;
+    color:#718c00 !important;
     display:inline-block;
 }
 .pre-code .gi .x,html .gist .gist-file .gist-syntax .line-data pre .gi .x,.highlight code .gi .x {
-    color:#93a1a1 !important;
-    background-color:#355720 !important;
+    color:#718c00 !important;
     display:inline-block;
 }
 .pre-code .gs,html .gist .gist-file .gist-syntax .line-data pre .gs,.highlight code .gs {
@@ -259,7 +254,7 @@ p pre code,li pre code {
     font-weight:bold !important;
 }
 .pre-code .gu,html .gist .gist-file .gist-syntax .line-data pre .gu,.highlight code .gu {
-    color:#6c71c4 !important;
+    color:#3e999f !important;
 }
 .pre-code .kc,html .gist .gist-file .gist-syntax .line-data pre .kc,.highlight code .kc {
     color:#de935f !important;
@@ -362,7 +357,7 @@ p pre code,li pre code {
     width:100%;
 }
 .highlight,.gist-highlight {
-    margin-bottom:1.8em;
+    /*margin-bottom:1.8em;*/
     background:#1d1f21;
     overflow-y:hidden;
     overflow-x:auto;
@@ -391,7 +386,8 @@ pre::-webkit-scrollbar-thumb:horizontal,.highlight::-webkit-scrollbar-thumb:hori
     background:#000;
 }
 figure.code {
-    background:none;
+    background:#111;
+    border-radius: 5px;
     padding:0;
     border:0;
     margin-bottom:1.5em;
@@ -404,14 +400,16 @@ figure.code figcaption {
 }
 figure.code .highlight {
     margin-bottom:0;
+    border-radius: 5px;
 }
 .code-title,html .gist .gist-file .gist-meta a[href*='#file'],h3.filename,figure.code figcaption {
     text-align:center;
     font-size:13px;
     line-height:2em;
-    text-shadow:#cbcccc 0 1px 0;
-    color:#474747;
+    text-shadow:#333 0 1px 0;
+    color:#999;
     font-weight:normal;
+    padding: .1em 0;
     margin-bottom:0;
     -moz-border-radius-topleft:5px;
     -webkit-border-top-left-radius:5px;
@@ -420,21 +418,21 @@ figure.code .highlight {
     -webkit-border-top-right-radius:5px;
     border-top-right-radius:5px;
     font-family:"Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
-    background:#aaa url('/images/code_bg.png?1346949399') top repeat-x;
-    border:1px solid #565656;
+    background:#111;
+    /*border:1px solid #565656;
     border-top-color:#cbcbcb;
     border-left-color:#a5a5a5;
-    border-right-color:#a5a5a5;
+    border-right-color:#a5a5a5;*/
     border-bottom:0;
 }
 .download-source,html .gist .gist-file .gist-meta a[href*=raw],figure.code figcaption a {
     position:absolute;
     right:.8em;
     text-decoration:none;
-    color:#666 !important;
+    color:#888 !important;
     z-index:1;
     font-size:13px;
-    text-shadow:#cbcccc 0 1px 0;
+    text-shadow:#333 0 1px 0;
     padding-left:3em;
 }
 .download-source:hover,html .gist .gist-file .gist-meta a[href*=raw]:hover,figure.code figcaption a:hover {

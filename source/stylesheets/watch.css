@@ -68,6 +68,9 @@ hgroup:hover {
     border-radius: 15px;
     cursor: pointer;
 }
+code, kbd, pre, li code {
+    font-size: 13px;
+}
 /* Post */
 .entry-title {
     font-size: 25px;
@@ -87,7 +90,10 @@ hgroup:hover {
     font-size: 13px;
     color: #777;
 }
-
+/* Sidebar */
+.botm {
+    text-align: center;
+}
 /* Footer */
 #footer {
     text-align: center;
