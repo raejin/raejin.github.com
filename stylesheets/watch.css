@@ -26,6 +26,14 @@ a:hover {
 nav ,hgroup h2 {
     display: none;
 }
+#err {
+    font-family: 'Averia Sans Libre', cursive;
+    font-size: 100px;
+    text-align: center;
+}
+.err-text {
+    font-size: 30px;
+}
 /* Layout */
 
 #main { margin: 0 auto; }
