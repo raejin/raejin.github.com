@@ -97,7 +97,7 @@ code, kbd, pre, li code {
 /* Post */
 .entry-title {
     font-size: 25px;
-    font-family: 'lucida grande', 'Microsoft JhengHei', Helvetica, Arial, sans-serif, serif;
+    font-family: 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
     margin: 5px 0;
 }
 .entry-content {
