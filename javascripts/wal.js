@@ -4,6 +4,7 @@ $(function() {
 
     var headerLogoClick = function() {
         var hg = $('hgroup');
+        console.log(hg.length);
         hg.on('click', function() {
             window.location.href = "http://" + host;
         });

@@ -4,7 +4,7 @@
   <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-03-31T13:31:30-07:00</updated>
+  <updated>2013-04-06T00:54:05-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Internship for summer 2013]]></title>
+    <link href="http://raejin.github.com/blog/2013/04/06/internship-for-summer-2013/"/>
+    <updated>2013-04-06T00:40:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/04/06/internship-for-summer-2013</id>
+    <content type="html"><![CDATA[<p>I have been very busy interviewing for my internship opportunities. And it went quite well despite the fact that I got a rejection from a startup. At first, I was a little bit disappointed about how I blew the second phone interview. However, I quickly resumed my confidence as I kept getting email requesting interviews. Overall, the internship recruiting experience has been positive and I&#8217;ve learned tons of tips on things like &#8220;how to make your first impression&#8221; or &#8220;bugging the recruiters you know until you get an interview&#8221;. If it wasn&#8217;t my sister who is experienced with all of this, I could&#8217;ve been still blindly submitting my not-so-impressive resume electronically.</p>
+
+<p>So I ended up taking the offer from Autodesk. Weird right? They are well-known for AutoCAD, and lots of 3D design software suite that are widely used in different industries. But why Autodesk? The most important determinant for me is the degree of impact I would make for a job, as well as the level of experience I would learn from the developers. Also, I originally set up a list of the language or frameworks that I want to learn/master for this summer. It turns out that I am going to use Ruby on Rails as the back-end to develop the project, which is great. Because I really need to learn Ruby on Rails by practical implementation.</p>
+
+<p>I just need to take good care of the rest of the semester and occasionally learn Ruby on Rails from time to time before the first day of my internship! Woot woot!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hex color picker for Mac]]></title>
+    <link href="http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac/"/>
+    <updated>2013-04-06T00:05:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac</id>
+    <content type="html"><![CDATA[<p>Whenever I need to decide a specific color to use, I always consult my sweet Photoshop CS6 since it runs pretty smooth on my laptop. But this is an overkill, opening up Photoshop simply for picking a color sounds so stupid and I&#8217;ve been doing this for years.</p>
+
+<p>Luckily, I stumble upon <a href="http://yuji.wordpress.com/2010/08/01/mac-adding-hex-color-picker-to-color-picker/">this article</a> about how to configure a light-weight hex color picker app on a Mac. Although the article clearly maps out all the steps, I am still presenting it here:</p>
+
+<ol>
+<li>Download <a href="http://wafflesoftware.net/hexpicker/">Hex Color Picker</a></li>
+<li>Open AppleScript Editor</li>
+<li>Write the desired app name i.e. <code>ColorPicker</code></li>
+<li>Save as a file with <code>.app</code> as file extension</li>
+<li>Move the file <code>HexColorPicker.colorPicker</code> to <code>~/Library/ColorPickers</code></li>
+</ol>
+
+
+<p>Simple, elegant, no more Photoshop :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Blog for hackers?]]></title>

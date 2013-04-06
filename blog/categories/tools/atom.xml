@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tools | WATCH AND LEARN]]></title>
+  <link href="http://raejin.github.com/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://raejin.github.com/"/>
+  <updated>2013-04-06T00:54:05-07:00</updated>
+  <id>http://raejin.github.com/</id>
+  <author>
+    <name><![CDATA[Rae Liu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hex color picker for Mac]]></title>
+    <link href="http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac/"/>
+    <updated>2013-04-06T00:05:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac</id>
+    <content type="html"><![CDATA[<p>Whenever I need to decide a specific color to use, I always consult my sweet Photoshop CS6 since it runs pretty smooth on my laptop. But this is an overkill, opening up Photoshop simply for picking a color sounds so stupid and I've been doing this for years.</p>
+
+<p>Luckily, I stumble upon <a href="http://yuji.wordpress.com/2010/08/01/mac-adding-hex-color-picker-to-color-picker/">this article</a> about how to configure a light-weight hex color picker app on a Mac. Although the article clearly maps out all the steps, I am still presenting it here:</p>
+
+<ol>
+<li>Download <a href="http://wafflesoftware.net/hexpicker/">Hex Color Picker</a></li>
+<li>Open AppleScript Editor</li>
+<li>Write the desired app name i.e. <code>ColorPicker</code></li>
+<li>Save as a file with <code>.app</code> as file extension</li>
+<li>Move the file <code>HexColorPicker.colorPicker</code> to <code>~/Library/ColorPickers</code></li>
+</ol>
+
+
+<p>Simple, elegant, no more Photoshop :)</p>
+]]></content>
+  </entry>
+  
+</feed>
