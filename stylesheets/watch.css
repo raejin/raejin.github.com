@@ -95,13 +95,13 @@ code, kbd, pre, li code {
 }
 
 /* Post */
+article {
+    margin: 2em 0 5em;
+}
 .entry-title {
     font-size: 25px;
     font-family: 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
     margin: 5px 0;
-}
-.entry-content {
-    margin-bottom: 5em;
 }
 .entry-content li {
     margin: 1em 0;
