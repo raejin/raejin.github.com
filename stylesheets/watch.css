@@ -23,7 +23,7 @@ a {
 a:hover {
     color: #000;
 }
-nav ,hgroup h2 {
+nav, hgroup h2, .m-logo {
     display: none;
 }
 #err {
@@ -119,6 +119,10 @@ article {
 .meta {
     font-size: 13px;
     color: #777;
+}
+/* Comment */
+.moot {
+    margin-bottom: 20em;
 }
 /* Sidebar */
 .botm {
