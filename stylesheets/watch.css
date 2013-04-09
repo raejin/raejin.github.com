@@ -124,24 +124,34 @@ article {
 .moot {
     margin-bottom: 20em;
 }
+.is-forum {
+    margin-top: 2em;
+}
 /* Sidebar */
+.lft {
+    float: left;
+    margin-top: 3em;
+}
 .botm {
     float: right;
     margin-top: .3em;
 }
-.botm ul {
+.botm ul, .lft ul {
     list-style: none;
     text-align: left;
     display: inline-block;
     margin: 0 auto;
     font-size: 13px;
 }
-.botm li a {
+.lft ul {
+    padding-left: 0;
+}
+.botm li a, .lft li a {
     color: #999;
 }
-.botm li a:hover {
+.botm li a:hover, .lft li a:hover {
     color: #222;
 }
-.botm li {
+.botm li, .lft li {
     margin: 5px 0;
 }
