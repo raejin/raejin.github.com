@@ -122,7 +122,7 @@ article {
 }
 /* Comment */
 .moot {
-    margin-bottom: 20em;
+    margin-bottom: 20em !important;
 }
 .is-forum {
     margin-top: 2em;
