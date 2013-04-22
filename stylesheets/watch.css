@@ -110,6 +110,9 @@ article {
 .entry-content ul {
     margin: 1.5em;
 }
+.entry-content {
+    font-family: "Open Sans";
+}
 .entry-content p {
     font-size: 15px;
     line-height: 1.8em;
