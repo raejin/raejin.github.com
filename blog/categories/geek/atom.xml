@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geek | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/geek/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-04-25T20:02:49-07:00</updated>
+  <updated>2013-04-25T20:03:53-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -24,7 +24,7 @@
 
 <p>Here it goes, I need to remind myself how dumb I was/am and hopefully I stay motivated to be an effective engineer.</p>
 
-<p><code>
+<p><code>shell
 $ cat someFile | comm -12 - anotherFile
 </code></p>
 
