@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geek | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/geek/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-04-21T23:36:41-07:00</updated>
+  <updated>2013-04-25T20:02:49-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How long does it take a noob to master UNIX commands?]]></title>
+    <link href="http://raejin.github.com/blog/2013/04/25/unixnoob/"/>
+    <updated>2013-04-25T19:52:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/04/25/unixnoob</id>
+    <content type="html"><![CDATA[<p>This semester I am taking a self-paced UNIX class, which is a lot more fun compared to the other theoretical-ish computer courses. Sometimes I really lack motivation to learn effective UNIX commands to make my life easier. And I don't think I'm alone, but in order to be a legit software enginner I must at least not suck at the basics.</p>
+
+<p>Last week I ran to an UNIX tutor asking some dumb questions from the text, and I finally realized that piping is not restricted to a single input command! I wonder why it took me so long to notice this trivial fact, why!!!!????</p>
+
+<p>Here it goes, I need to remind myself how dumb I was/am and hopefully I stay motivated to be an effective engineer.</p>
+
+<p><code>
+$ cat someFile | comm -12 - anotherFile
+</code></p>
+
+<p>It's the hyphen that makes this works beautifully! Who would have thought of using hyphen? Who?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hex color picker for Mac]]></title>
