@@ -27,7 +27,7 @@ nav, hgroup h2, .m-logo {
     display: none;
 }
 #err {
-    font-family: 'Averia Sans Libre', cursive;
+    font-family: 'Averia Sans Libre', serif;
     font-size: 100px;
     text-align: center;
 }
@@ -100,7 +100,7 @@ article {
 }
 .entry-title {
     font-size: 25px;
-    font-family: 'Donegal One', 'Arbutus Slab', 'HeiTi TC', 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
+    font-family: 'Donegal One', 'HeiTi TC', 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
     margin: 5px 0;
     font-weight: normal;
 }
@@ -112,7 +112,7 @@ article {
     margin: 1.5em;
 }
 .entry-content {
-    font-family: "Noto Sans" , "Microsoft JhengHei", "lucida grande", "lucida sans unicode", arial, sans-serif;
+    font-family: "Noto Sans", 'Microsoft JhengHei', "lucida grande", "lucida sans unicode", arial, sans-serif;
 }
 .entry-content p {
     font-size: 15px;
