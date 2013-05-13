@@ -100,7 +100,7 @@ article {
 }
 .entry-title {
     font-size: 25px;
-    font-family: 'Donegal One', 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
+    font-family: 'Donegal One', 'lucida grande', Helvetica, Arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif, serif;
     margin: 5px 0;
     font-weight: normal;
 }
@@ -112,7 +112,7 @@ article {
     margin: 1.5em;
 }
 .entry-content {
-    font-family: "Noto Sans", "微軟正黑體", 'Microsoft JhengHei', "lucida grande", "lucida sans unicode", arial, sans-serif;
+    font-family: "Noto Sans", "lucida grande", "lucida sans unicode", arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif;
 }
 .entry-content p {
     font-size: 15px;
