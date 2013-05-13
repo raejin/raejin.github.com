@@ -100,7 +100,7 @@ article {
 }
 .entry-title {
     font-size: 25px;
-    font-family: 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
+    font-family: 'Arbutus Slab', 'HeiTi TC', 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
     margin: 5px 0;
 }
 .entry-content li {
@@ -111,7 +111,7 @@ article {
     margin: 1.5em;
 }
 .entry-content {
-    font-family: "Noto Sans";
+    font-family: "Noto Sans", "lucida grande", "lucida sans unicode", arial, sans-serif;
 }
 .entry-content p {
     font-size: 15px;
