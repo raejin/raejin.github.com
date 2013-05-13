@@ -102,6 +102,7 @@ article {
     font-size: 25px;
     font-family: 'Donegal One', 'Arbutus Slab', 'HeiTi TC', 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
     margin: 5px 0;
+    font-weight: normal;
 }
 .entry-content li {
     margin: 1em 0;
