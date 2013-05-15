@@ -4,7 +4,7 @@
   <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-05-13T16:11:50-07:00</updated>
+  <updated>2013-05-15T08:04:33-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,6 +12,19 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SelfControl saves my final grades]]></title>
+    <link href="http://raejin.github.com/blog/2013/05/15/selfcontrol-saves-my-final-grades/"/>
+    <updated>2013-05-15T07:54:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/05/15/selfcontrol-saves-my-final-grades</id>
+    <content type="html"><![CDATA[<p>Alright, I know the title is a bit off. I could&#8217;ve still suffered if I don&#8217;t study well enough to handle the finals. I&#8217;ve discovered a OSX application called SelfControl to prevent me from wondering on social websites occasionally for a period of time.</p>
+
+<p>(This app)[http://selfcontrolapp.com/] is really awesome if you are the kind of person like me who lacks self-discipline whenever there is a need to focus. Well, mainly the reason is I don&#8217;t really like the material and it is hard in general, so that pushed me off from being proactive about the finals.</p>
+
+<p>Fortunately, this app is powerful enough to keep me from cracking the rules. It claims that after the rules are set, there is no way to break the rules even uninstalling the app. So there you have it! In case someone is looking for some help to get focused studying for exams.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How long does it take a noob to master UNIX commands?]]></title>
