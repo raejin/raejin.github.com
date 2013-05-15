@@ -84,8 +84,11 @@ pinboard_count: 3
 delicious_user:
 delicious_count: 3
 
+# Moot.it
+moot_user: raejin
+
 # Disqus Comments
-disqus_short_name: raejin
+disqus_short_name: #raejin
 disqus_show_comment_count: false
 
 # Google Analytics

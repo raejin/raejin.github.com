@@ -1,0 +1,3 @@
+{% if site.moot_user and page.comments != false and page.comments == true %}
+<a class="moot" title="Testing" href="http://api.moot.it/{{ site.moot_user }}/{{ page.url }}#{{ page.title }}"></a>
+{% endif %}

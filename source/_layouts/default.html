@@ -6,6 +6,7 @@
   <div id="main">
     <div id="content">
       {{ content | expand_urls: root_url }}
+      {% include moot.html %}
     </div>
   </div>
   <footer id="footer" role="contentinfo">{% include footer.html %}</footer>

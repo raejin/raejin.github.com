@@ -23,11 +23,11 @@ a {
 a:hover {
     color: #000;
 }
-nav ,hgroup h2 {
+nav, hgroup h2, .m-logo {
     display: none;
 }
 #err {
-    font-family: 'Averia Sans Libre', cursive;
+    font-family: 'Averia Sans Libre', serif;
     font-size: 100px;
     text-align: center;
 }
@@ -95,13 +95,14 @@ code, kbd, pre, li code {
 }
 
 /* Post */
+article {
+    margin: 2em 0 5em;
+}
 .entry-title {
     font-size: 25px;
-    font-family: 'Microsoft JhengHei', 'lucida grande', Helvetica, Arial, sans-serif, serif;
+    font-family: 'Donegal One', 'lucida grande', Helvetica, Arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif, serif;
     margin: 5px 0;
-}
-.entry-content {
-    margin-bottom: 5em;
+    font-weight: normal;
 }
 .entry-content li {
     margin: 1em 0;
@@ -109,6 +110,9 @@ code, kbd, pre, li code {
 }
 .entry-content ul {
     margin: 1.5em;
+}
+.entry-content {
+    font-family: "Noto Sans", "lucida grande", "lucida sans unicode", arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif;
 }
 .entry-content p {
     font-size: 15px;
@@ -120,24 +124,38 @@ code, kbd, pre, li code {
     font-size: 13px;
     color: #777;
 }
+/* Comment */
+.moot {
+    margin-bottom: 20em !important;
+}
+.is-forum {
+    margin-top: 2em;
+}
 /* Sidebar */
+.lft {
+    float: left;
+    margin-top: 3em;
+}
 .botm {
     float: right;
     margin-top: .3em;
 }
-.botm ul {
+.botm ul, .lft ul {
     list-style: none;
     text-align: left;
     display: inline-block;
     margin: 0 auto;
     font-size: 13px;
 }
-.botm li a {
+.lft ul {
+    padding-left: 0;
+}
+.botm li a, .lft li a {
     color: #999;
 }
-.botm li a:hover {
+.botm li a:hover, .lft li a:hover {
     color: #222;
 }
-.botm li {
+.botm li, .lft li {
     margin: 5px 0;
 }
