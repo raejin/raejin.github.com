@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: geek | WATCH AND LEARN]]></title>
-  <link href="http://raejin.github.com/blog/categories/geek/atom.xml" rel="self"/>
-  <link href="http://raejin.github.com/"/>
-  <updated>2013-05-15T10:43:50-07:00</updated>
-  <id>http://raejin.github.com/</id>
+  <link href="http://raejin.com/blog/categories/geek/atom.xml" rel="self"/>
+  <link href="http://raejin.com/"/>
+  <updated>2013-05-15T11:07:22-07:00</updated>
+  <id>http://raejin.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[SelfControl saves my final grades]]></title>
-    <link href="http://raejin.github.com/blog/2013/05/15/selfcontrol-saves-my-final-grades/"/>
+    <link href="http://raejin.com/blog/2013/05/15/selfcontrol-saves-my-final-grades/"/>
     <updated>2013-05-15T07:54:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/05/15/selfcontrol-saves-my-final-grades</id>
+    <id>http://raejin.com/blog/2013/05/15/selfcontrol-saves-my-final-grades</id>
     <content type="html"><![CDATA[<p>Alright, I know the title is a bit off. I could've still suffered if I don't study well enough to handle the finals. I've discovered a OSX application called SelfControl to prevent me from wondering on social websites occasionally for a period of time.</p>
 
 <p><a href="http://selfcontrolapp.com/">This app</a> is really awesome if you are the kind of person like me who lacks self-discipline whenever there is a need to focus. Well, mainly the reason is I don't really like the material and it is hard in general, so that pushed me off from being proactive about the finals.</p>
@@ -28,9 +28,9 @@
   
   <entry>
     <title type="html"><![CDATA[How long does it take a noob to master UNIX commands?]]></title>
-    <link href="http://raejin.github.com/blog/2013/04/25/unixnoob/"/>
+    <link href="http://raejin.com/blog/2013/04/25/unixnoob/"/>
     <updated>2013-04-25T19:52:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/04/25/unixnoob</id>
+    <id>http://raejin.com/blog/2013/04/25/unixnoob</id>
     <content type="html"><![CDATA[<p>This semester I am taking a self-paced UNIX class, which is a lot more fun compared to the other theoretical-ish computer courses. Sometimes I really lack motivation to learn effective UNIX commands to make my life easier. And I don't think I'm alone, but in order to be a legit software enginner I must at least not suck at the basics.</p>
 
 <p>Last week I ran to an UNIX tutor asking some dumb questions from the text, and I finally realized that piping is not restricted to a single input command! I wonder why it took me so long to notice this trivial fact, why!!!!????</p>
@@ -47,9 +47,9 @@ $ cat someFile | comm -12 - anotherFile
   
   <entry>
     <title type="html"><![CDATA[Hex color picker for Mac]]></title>
-    <link href="http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac/"/>
+    <link href="http://raejin.com/blog/2013/04/06/hex-color-picker-for-mac/"/>
     <updated>2013-04-06T00:05:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac</id>
+    <id>http://raejin.com/blog/2013/04/06/hex-color-picker-for-mac</id>
     <content type="html"><![CDATA[<p>Whenever I need to decide a specific color to use, I always consult my sweet Photoshop CS6 since it runs pretty smooth on my laptop. But this is an overkill, opening up Photoshop simply for picking a color sounds so stupid and I've been doing this for years.</p>
 
 <p>Luckily, I stumble upon <a href="http://yuji.wordpress.com/2010/08/01/mac-adding-hex-color-picker-to-color-picker/">this article</a> about how to configure a light-weight hex color picker app on a Mac. Although the article clearly maps out all the steps, I am still presenting it here:</p>

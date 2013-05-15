@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hack | WATCH AND LEARN]]></title>
-  <link href="http://raejin.github.com/blog/categories/hack/atom.xml" rel="self"/>
-  <link href="http://raejin.github.com/"/>
-  <updated>2013-05-15T10:43:50-07:00</updated>
-  <id>http://raejin.github.com/</id>
+  <link href="http://raejin.com/blog/categories/hack/atom.xml" rel="self"/>
+  <link href="http://raejin.com/"/>
+  <updated>2013-05-15T11:07:22-07:00</updated>
+  <id>http://raejin.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Blog for hackers?]]></title>
-    <link href="http://raejin.github.com/blog/2013/03/27/blog-for-hackers/"/>
+    <link href="http://raejin.com/blog/2013/03/27/blog-for-hackers/"/>
     <updated>2013-03-27T18:43:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/03/27/blog-for-hackers</id>
+    <id>http://raejin.com/blog/2013/03/27/blog-for-hackers</id>
     <content type="html"><![CDATA[<p>Why am I switching the blogging platform? It sounds like an annual routine that has been done over and over again in the blogging business. I remeber the first time I was introduced with Wordpress, awesome and highly customizable. Although it was a hassle to get things work with Wordpress, the urge to personalize my blog made me step out of my comfort zone.</p>
 
 <p>This time is no different than the first time. The reason why I am switching is actually very silly. I've seen so many cool developers using Octopress to blog, and they made it look really awesome due to the fact that Octopress is easy to hack. Octopress claimed it inteded to be used by hackers only, since everything needs to be done in terminal with no exception. Its nature will potentially scare off regular users, so this makes using Octopress even cooler. Yeah, that's why I am switching, because I want to pretend that I am a cool hacker, which I am really not.</p>
