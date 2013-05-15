@@ -98,7 +98,10 @@ code, kbd, pre, li code {
 article {
     margin: 2em 0 5em;
 }
-.entry-title {
+#blog-archives article {
+    margin: 2em 0;
+}
+.entry-title, #blog-archives h1 {
     font-size: 25px;
     font-family: 'Arbutus Slab', 'lucida grande', Helvetica, Arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif, serif;
     margin: 5px 0;
