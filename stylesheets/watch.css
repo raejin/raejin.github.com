@@ -1,0 +1,161 @@
+/* General Settings */
+::selection {
+    background-color: #a05682;
+    color: #fff;
+}
+::-moz-selection {
+    background-color: #a05682;
+    color: #fff;
+}
+body {
+    font-size: 14px;
+    font-family: "lucida grande","lucida sans unicode",arial,sans-serif;
+    background: #eee;
+    cursor: default;
+}
+input, option, select {
+    font-size: 13px;
+}
+a {
+    color: #4b8d0b;
+    text-decoration: none;
+}
+a:hover {
+    color: #000;
+}
+nav, hgroup h2, .m-logo {
+    display: none;
+}
+#err {
+    font-family: 'Averia Sans Libre', serif;
+    font-size: 100px;
+    text-align: center;
+}
+.err-text {
+    font-size: 30px;
+}
+/* Layout */
+
+#main { margin: 0 auto; }
+
+@media (min-width: 780px) {
+    #main, header { width: 777px; }
+}
+@media (max-width: 780px) {
+    #main, header { width: 90%; }
+}
+
+
+/* Header */
+header {
+    margin: 10px auto 0;
+}
+hgroup h1 {
+    font-family: 'Averia Sans Libre', cursive;
+    font-size: 23px;
+    line-height: 1.4;
+    margin: 0;
+}
+hgroup h1 a {
+    color: #000;
+}
+hgroup {
+    display: block;
+    width: 90px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 5px 0 3px 10px;
+    color: #333;
+}
+hgroup:hover {
+    background: #ddd;
+    box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
+    -o-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
+    -webkit-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
+    -moz-box-shadow: 0 1px 5px #999, inset 0 10px 20px #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+}
+code, kbd, pre, li code {
+    font-size: 13px;
+}
+/* Archive */
+.blog-archives-year {
+    font-size: 30px;
+    color: #555;
+    text-align: right;
+}
+#blog-archives h1 {
+    font-size: 1.8em;
+}
+#blog-archives time {
+    color: #777;
+    float:right;
+    margin-top: .5em;
+}
+
+/* Post */
+article {
+    margin: 2em 0 5em;
+}
+.entry-title {
+    font-size: 25px;
+    font-family: 'Donegal One', 'lucida grande', Helvetica, Arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif, serif;
+    margin: 5px 0;
+    font-weight: normal;
+}
+.entry-content li {
+    margin: 1em 0;
+    padding: 0 .5em;
+}
+.entry-content ul {
+    margin: 1.5em;
+}
+.entry-content {
+    font-family: "Noto Sans", "lucida grande", "lucida sans unicode", arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif;
+}
+.entry-content p {
+    font-size: 15px;
+    line-height: 1.8em;
+    color: rgb(68, 68, 68);
+    text-shadow: 0 1px 1px #fff;
+}
+.meta {
+    font-size: 13px;
+    color: #777;
+}
+/* Comment */
+.moot {
+    margin-bottom: 20em !important;
+}
+.is-forum {
+    margin-top: 2em;
+}
+/* Sidebar */
+.lft {
+    float: left;
+    margin-top: 3em;
+}
+.botm {
+    float: right;
+    margin-top: .3em;
+}
+.botm ul, .lft ul {
+    list-style: none;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 13px;
+}
+.lft ul {
+    padding-left: 0;
+}
+.botm li a, .lft li a {
+    color: #999;
+}
+.botm li a:hover, .lft li a:hover {
+    color: #222;
+}
+.botm li, .lft li {
+    margin: 5px 0;
+}
