@@ -1,4 +1,8 @@
 $(function () {
+  function heightExamine () {
+    var windowsHeight = $(window).height();
+    $('#footer').text('Height: ' + windowsHeight);
+  }
   // function imageResize() {
   //   var windowsHeight = $(window).height();
   //   $('.photo').css({ 'height' : windowsHeight * 0.7 });
@@ -6,4 +10,6 @@ $(function () {
   // }
   // imageResize();
   // $(window).resize(imageResize);
+  heightExamine();
+  $(window).resize(heightExamine);
 });
