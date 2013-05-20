@@ -8,7 +8,7 @@ html, body {
   height: 100%;
 }
 #top {
-  height: 12%;
+  height: 10%;
   background-color: #555;
 }
 #top h1 {
@@ -26,7 +26,7 @@ html, body {
   background-color: #eee;
 }
 #footer {
-  height: 18%;
+  height: 20%;
   background-color: #111;
 }
 .photo {
