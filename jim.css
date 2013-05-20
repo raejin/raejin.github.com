@@ -10,9 +10,13 @@ html, body {
 #top {
   height: 12%;
   background-color: #555;
+}
+#top h1 {
   color: #eee;
-  font-size: 4em;
   font-family: 'Arbutus Slab', serif;
+  padding: 0.7em 1em;
+  margin: 0;
+  font-size: 2em;
 }
 #main {
   height: 70%;
