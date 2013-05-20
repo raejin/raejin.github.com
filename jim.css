@@ -1,5 +1,30 @@
+html, body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+#outer {
+  height: 100%;
+}
+#top {
+  height: 12%;
+  background-color: #555;
+  color: #eee;
+  font-size: 4em;
+  font-family: 'Arbutus Slab', serif;
+}
 #main {
+  height: 70%;
   overflow-x: scroll;
   overflow-y: hidden;
   width: 100%;
+  background-color: #eee;
+}
+#footer {
+  height: 18%;
+  background-color: #111;
+}
+.photo {
+  height: 100%;
 }
