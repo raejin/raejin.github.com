@@ -72,23 +72,39 @@ body {
   font-weight: 400;
 }
 #title h1 {
-  margin: 0 30px;
+  margin: 0 0 0 30px;
   padding: 0;
   font-weight: 100;
   color: #fff;
 }
 #main {
   height: 75%;
+  width: 100%;
+}
+.mainPortfolio {
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 100%;
-  background-color: #eee;
 }
 #footer {
   height: 21%;
 }
+.landing {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*display: none;*/
+}
+#landing {
+  text-align: center;
+}
+#landing img {
+  position: relative;
+  top: 50%;
+  margin-top: -68px;
+  width: 70%;
+}
 .portfolio {
   height: 100%;
+  display: none;
 }
 .portfolio-pic {
   height: 100%;

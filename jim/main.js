@@ -32,6 +32,13 @@ $(function () {
       });
     });
   }
+  function scaleFont() {
+    var viewWidth = $(window).width();
+
+    if (viewWidth >= 967) { $('body').css({'font-size' : '14px'}); }
+    else if (viewWidth >= 845) { $('body').css({'font-size' : '12px'}); }
+    else { $('body').css({'font-size' : '10px'}); }
+  }
   function resizeWidthAdjust () {
     $('.portfolio').each(function () {
       var totalWidth = 0;
@@ -47,6 +54,10 @@ $(function () {
     var windowsHeight = $(window).height();
     $('#footer').text('Height: ' + windowsHeight);
   }
+  scaleFont();
   preload('roku-content-pic', 'ID_Roku_', 13, '#roku');
-  $(window).resize(resizeWidthAdjust);
+  $(window).resize(function () {
+    resizeWidthAdjust();
+    scaleFont();
+  });
 });
