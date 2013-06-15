@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[WATCH AND LEARN]]></title>
-  <link href="http://raejin.com/atom.xml" rel="self"/>
-  <link href="http://raejin.com/"/>
-  <updated>2013-05-24T18:01:52-07:00</updated>
-  <id>http://raejin.com/</id>
+  <link href="http://raejin.github.com/atom.xml" rel="self"/>
+  <link href="http://raejin.github.com/"/>
+  <updated>2013-06-15T12:09:03-07:00</updated>
+  <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
     
@@ -14,123 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Readings for the summer]]></title>
-    <link href="http://raejin.com/blog/2013/05/19/readings-for-the-summer/"/>
-    <updated>2013-05-19T14:32:00-07:00</updated>
-    <id>http://raejin.com/blog/2013/05/19/readings-for-the-summer</id>
-    <content type="html"><![CDATA[<p>Hello! Summer 2013 officially started :-)</p>
-
-<p>Today is the second day of the summer, and I feel pretty good about having a fresh start despite the fact that I did waste yesterday just to have beers with my friends. All in all, life&#8217;s good after the final exams, YAY!</p>
-
-<p>This summer I will be working on Ruby on Sinatra, along with some light-weight front-end framework. Therefore, in order to get ready for my internship, I am setting up a reading list so that I don&#8217;t just blindly work on something without understanding the fundamentals.</p>
-
-<p>Although I don&#8217;t think the project I will be working on requires any kind of sophisticated front-end work, I still want to learn the trendy hipster-ish front-end JavaScript frameworks like <a href="http://angularjs.org">AngularJS</a>, <a href="http://knockoutjs.com">KnockoutJS</a>, or <a href="http://emberjs.com">EmberJS</a>.</p>
-
-<p>Here is the reading list of the books and the useful tutorials:</p>
-
-<h3>Online resources</h3>
-
-<ul>
-<li><a href="http://www.youtube.com/playlist?list=PLP6DbQBkn9ymGQh2qpk9ImLHdSH5T7yw7">AngularJS video tutorial on Egghead.io</a></li>
-<li><a href="http://contribute.jquery.org/style-guide/js/">JavaScript Style Guide by jQuery</a></li>
-<li><a href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide (Re-read again)</a></li>
-<li><a href="http://rubysource.com/rails-development-101-rvm/">Rails Intro, Deep Dive: RVM</a></li>
-<li><a href="http://www.sinatrarb.com/intro.html">Sinatra Intro</a></li>
-<li><a href="http://sass-lang.com/">Sass</a></li>
-<li><a href="http://haml.info/">Haml</a></li>
-<li><a href="http://coffeescript.org/">CoffeeScript</a></li>
-</ul>
-
-
-<h3>Books reference</h3>
-
-<ul>
-<li><a href="http://shop.oreilly.com/product/0636920019664.do">Sinatra: Up and Running</a></li>
-<li><a href="http://shop.oreilly.com/product/9780596517748.do">JavaScript The Good Parts</a></li>
-<li><a href="http://shop.oreilly.com/product/9780596529307.do">High Performance Web Sites - Essential Knowledge for Front-End Engineers</a></li>
-<li><a href="http://ruby.railstutorial.org/">Ruby on Rails Tutorial, Second Edition</a></li>
-<li><a href="http://pragprog.com/book/ruby3/programming-ruby-1-9">Programming Ruby: The Pragmatic Programmers&#8217; Guide</a></li>
-</ul>
-
-
-<p>So far I found Ruby very magical and pseudo-intuitive to learn, but as coming from a less-dynamic programming language, I sometimes found I am doing too much work for what should&#8217;ve been done in two lines of code. I need to practice write less code in Ruby to achieve maximum efficiency. I will continue to update this list as I found useful resources.</p>
-
-<p>It&#8217;s already a great start, cheers Rae!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SelfControl saves my final grades]]></title>
-    <link href="http://raejin.com/blog/2013/05/15/selfcontrol-saves-my-final-grades/"/>
-    <updated>2013-05-15T07:54:00-07:00</updated>
-    <id>http://raejin.com/blog/2013/05/15/selfcontrol-saves-my-final-grades</id>
-    <content type="html"><![CDATA[<p>Alright, I know the title is a bit off. I could&#8217;ve still suffered if I don&#8217;t study well enough to handle the finals. I&#8217;ve discovered a OSX application called SelfControl to prevent me from wondering on social websites occasionally for a period of time.</p>
-
-<p><a href="http://selfcontrolapp.com/">This app</a> is really awesome if you are the kind of person like me who lacks self-discipline whenever there is a need to focus. Well, mainly the reason is I don&#8217;t really like the material and it is hard in general, so that pushed me off from being proactive about the finals.</p>
-
-<p>Fortunately, this app is powerful enough to keep me from cracking the rules. It claims that after the rules are set, there is no way to break the rules even uninstalling the app. So there you have it! In case someone is looking for some help to get focused studying for exams.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How long does it take a noob to master UNIX commands?]]></title>
-    <link href="http://raejin.com/blog/2013/04/25/unixnoob/"/>
-    <updated>2013-04-25T19:52:00-07:00</updated>
-    <id>http://raejin.com/blog/2013/04/25/unixnoob</id>
-    <content type="html"><![CDATA[<p>This semester I am taking a self-paced UNIX class, which is a lot more fun compared to the other theoretical-ish computer courses. Sometimes I really lack motivation to learn effective UNIX commands to make my life easier. And I don&#8217;t think I&#8217;m alone, but in order to be a legit software enginner I must at least not suck at the basics.</p>
-
-<p>Last week I ran to an UNIX tutor asking some dumb questions from the text, and I finally realized that piping is not restricted to a single input command! I wonder why it took me so long to notice this trivial fact, why!!!!????</p>
-
-<p>Here it goes, I need to remind myself how dumb I was/am and hopefully I stay motivated to be an effective engineer.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat someFile | comm -12 - anotherFile</span></code></pre></td></tr></table></div></figure>
-
-
-<p>It&#8217;s the hyphen that makes this works beautifully! Who would have thought of using hyphen? Who?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Internship for summer 2013]]></title>
-    <link href="http://raejin.com/blog/2013/04/06/internship-for-summer-2013/"/>
-    <updated>2013-04-06T00:40:00-07:00</updated>
-    <id>http://raejin.com/blog/2013/04/06/internship-for-summer-2013</id>
-    <content type="html"><![CDATA[<p>I have been very busy interviewing for my internship opportunities. And it went quite well despite the fact that I got a rejection from a startup. At first, I was a little bit disappointed about how I blew the second phone interview. However, I quickly resumed my confidence as I kept getting email requesting interviews. Overall, the internship recruiting experience has been positive and I&#8217;ve learned tons of tips on things like &#8220;how to make your first impression&#8221; or &#8220;bugging the recruiters you know until you get an interview&#8221;. If it wasn&#8217;t my sister who is experienced with all of this, I could&#8217;ve been still blindly submitting my not-so-impressive resume electronically.</p>
-
-<p>So I ended up taking the offer from Autodesk. Weird right? They are well-known for AutoCAD, and lots of 3D design software suite that are widely used in different industries. But why Autodesk? The most important determinant for me is the degree of impact I would make for a job, as well as the level of experience I would learn from the developers. Also, I originally set up a list of the language or frameworks that I want to learn/master for this summer. It turns out that I am going to use Ruby on Rails as the back-end to develop the project, which is great. Because I really need to learn Ruby on Rails by practical implementation.</p>
-
-<p>I just need to take good care of the rest of the semester and occasionally learn Ruby on Rails from time to time before the first day of my internship! Woot woot!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hex color picker for Mac]]></title>
-    <link href="http://raejin.com/blog/2013/04/06/hex-color-picker-for-mac/"/>
-    <updated>2013-04-06T00:05:00-07:00</updated>
-    <id>http://raejin.com/blog/2013/04/06/hex-color-picker-for-mac</id>
-    <content type="html"><![CDATA[<p>Whenever I need to decide a specific color to use, I always consult my sweet Photoshop CS6 since it runs pretty smooth on my laptop. But this is an overkill, opening up Photoshop simply for picking a color sounds so stupid and I&#8217;ve been doing this for years.</p>
-
-<p>Luckily, I stumble upon <a href="http://yuji.wordpress.com/2010/08/01/mac-adding-hex-color-picker-to-color-picker/">this article</a> about how to configure a light-weight hex color picker app on a Mac. Although the article clearly maps out all the steps, I am still presenting it here:</p>
-
-<ol>
-<li>Download <a href="http://wafflesoftware.net/hexpicker/">Hex Color Picker</a></li>
-<li>Open AppleScript Editor</li>
-<li>Write the desired app name i.e. <code>ColorPicker</code></li>
-<li>Save as a file with <code>.app</code> as file extension</li>
-<li>Move the file <code>HexColorPicker.colorPicker</code> to <code>~/Library/ColorPickers</code></li>
-</ol>
-
-
-<p>Simple, elegant, no more Photoshop :)</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Blog for hackers?]]></title>
-    <link href="http://raejin.com/blog/2013/03/27/blog-for-hackers/"/>
+    <link href="http://raejin.github.com/blog/2013/03/27/blog-for-hackers/"/>
     <updated>2013-03-27T18:43:00-07:00</updated>
-    <id>http://raejin.com/blog/2013/03/27/blog-for-hackers</id>
+    <id>http://raejin.github.com/blog/2013/03/27/blog-for-hackers</id>
     <content type="html"><![CDATA[<p>Why am I switching the blogging platform? It sounds like an annual routine that has been done over and over again in the blogging business. I remeber the first time I was introduced with Wordpress, awesome and highly customizable. Although it was a hassle to get things work with Wordpress, the urge to personalize my blog made me step out of my comfort zone.</p>
 
 <p>This time is no different than the first time. The reason why I am switching is actually very silly. I&#8217;ve seen so many cool developers using Octopress to blog, and they made it look really awesome due to the fact that Octopress is easy to hack. Octopress claimed it inteded to be used by hackers only, since everything needs to be done in terminal with no exception. Its nature will potentially scare off regular users, so this makes using Octopress even cooler. Yeah, that&#8217;s why I am switching, because I want to pretend that I am a cool hacker, which I am really not.</p>
@@ -178,9 +65,9 @@
   
   <entry>
     <title type="html"><![CDATA[關於起點]]></title>
-    <link href="http://raejin.com/blog/2013/03/13/a-new-start/"/>
+    <link href="http://raejin.github.com/blog/2013/03/13/a-new-start/"/>
     <updated>2013-03-13T00:24:00-07:00</updated>
-    <id>http://raejin.com/blog/2013/03/13/a-new-start</id>
+    <id>http://raejin.github.com/blog/2013/03/13/a-new-start</id>
     <content type="html"><![CDATA[<p>我一時之間也不知道該從何寫起，有些想法在腦海裡複誦久了反而不知道怎麼好好地用文字來表達。</p>
 
 <p>關於這個部落格，我想要將它定位成我學習寫程式的記錄，也算是為自己未來的事業開始打草稿。並不覺得我會變成怎樣出眾的人物，但我希望能夠留下些什麼，並且和我有同樣想法的人一起交流。我想要做的事情很多，但在那之前，我必須把我的草稿給打好。先把路給走好了，才能試試看可不可以飛。</p>

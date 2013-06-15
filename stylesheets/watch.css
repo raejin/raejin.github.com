@@ -23,11 +23,6 @@ a {
 a:hover {
     color: #000;
 }
-h1, h2, h3, h4, h5, h6 {
-    color: #222;
-    -webkit-font-smoothing: antialiased;
-    text-shadow: 0 1px 1px #fff;
-}
 nav, hgroup h2, .m-logo {
     display: none;
 }
@@ -103,12 +98,9 @@ code, kbd, pre, li code {
 article {
     margin: 2em 0 5em;
 }
-#blog-archives article {
-    margin: 2em 0;
-}
-.entry-title, #blog-archives h1 {
-    font-size: 1.9em;
-    font-family: 'Arbutus Slab', 'lucida grande', Helvetica, Arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif, serif;
+.entry-title {
+    font-size: 25px;
+    font-family: 'Donegal One', 'lucida grande', Helvetica, Arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif, serif;
     margin: 5px 0;
     font-weight: normal;
 }
@@ -123,7 +115,7 @@ article {
     font-family: "Noto Sans", "lucida grande", "lucida sans unicode", arial, 'HeiTi TC', "微軟正黑體", 'Microsoft JhengHei', sans-serif;
 }
 .entry-content p {
-    font-size: 1.05em;
+    font-size: 15px;
     line-height: 1.8em;
     color: rgb(68, 68, 68);
     text-shadow: 0 1px 1px #fff;

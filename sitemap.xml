@@ -1,55 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://raejin.com/blog/2013/03/13/a-new-start/</loc>
-        <lastmod>2013-04-09T00:54:55-07:00</lastmod>
+        <loc>http://raejin.github.com/blog/2013/03/13/a-new-start/</loc>
+        <lastmod>2013-06-06T21:36:00-07:00</lastmod>
     </url>
     <url>
-        <loc>http://raejin.com/blog/2013/03/27/blog-for-hackers/</loc>
-        <lastmod>2013-04-09T00:54:55-07:00</lastmod>
+        <loc>http://raejin.github.com/blog/2013/03/27/blog-for-hackers/</loc>
+        <lastmod>2013-06-06T21:36:00-07:00</lastmod>
     </url>
     <url>
-        <loc>http://raejin.com/blog/2013/04/06/hex-color-picker-for-mac/</loc>
-        <lastmod>2013-04-09T00:54:55-07:00</lastmod>
+        <loc>http://raejin.github.com/404.html</loc>
+        <lastmod>2013-06-06T21:36:00-07:00</lastmod>
     </url>
     <url>
-        <loc>http://raejin.com/blog/2013/04/06/internship-for-summer-2013/</loc>
-        <lastmod>2013-04-09T00:54:55-07:00</lastmod>
+        <loc>http://raejin.github.com/about/</loc>
+        <lastmod>2013-06-06T21:36:00-07:00</lastmod>
     </url>
     <url>
-        <loc>http://raejin.com/blog/2013/04/25/unixnoob/</loc>
-        <lastmod>2013-05-19T14:29:29-07:00</lastmod>
+        <loc>http://raejin.github.com/blog/archives/</loc>
+        <lastmod>2013-06-06T21:36:00-07:00</lastmod>
     </url>
     <url>
-        <loc>http://raejin.com/blog/2013/05/15/selfcontrol-saves-my-final-grades/</loc>
-        <lastmod>2013-05-15T11:02:10-07:00</lastmod>
+        <loc>http://raejin.github.com/discuss/</loc>
+        <lastmod>2013-06-06T21:36:00-07:00</lastmod>
     </url>
     <url>
-        <loc>http://raejin.com/blog/2013/05/19/readings-for-the-summer/</loc>
-        <lastmod>2013-05-19T15:25:54-07:00</lastmod>
+        <loc>http://raejin.github.com/</loc>
+        <lastmod>2013-06-06T21:36:00-07:00</lastmod>
     </url>
     <url>
-        <loc>http://raejin.com/404.html</loc>
-        <lastmod>2013-04-09T00:54:55-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://raejin.com/about/</loc>
-        <lastmod>2013-04-09T00:54:55-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://raejin.com/blog/archives/</loc>
-        <lastmod>2013-05-19T15:25:54-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://raejin.com/discuss/</loc>
-        <lastmod>2013-04-09T01:26:48-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://raejin.com/</loc>
-        <lastmod>2013-05-19T15:25:54-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://raejin.com/robots.txt</loc>
-        <lastmod>2013-03-26T23:15:34-07:00</lastmod>
+        <loc>http://raejin.github.com/robots.txt</loc>
+        <lastmod>2013-06-06T21:36:00-07:00</lastmod>
     </url>
 </urlset>

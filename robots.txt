@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://raejin.com/sitemap.xml 
+Sitemap: http://raejin.github.com/sitemap.xml 
