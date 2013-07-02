@@ -27,16 +27,16 @@ Although I finally figured out how to use Git to deploy remote instance, I reali
 create a git repo as a transition to deploy to a designated directory
 
 1. Copy local machine public key to the remote server (ec2 instance)
-```
+``` bash
 $ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com "cat >> ~/.ssh/authorized_keys"
 ```
 2. Create and initialize a new git repo
-```
+``` bash
 $ mkdir website.git && cd website.git
 $ git init --bare
 ```
 3. Configure the post-receive hook in order to put the files into desired directory
-```
+``` bash
 $ cat > hooks/post-receive
 #!/bin/sh
 GIT_WORK_TREE=/home/ubuntu/website
@@ -45,12 +45,12 @@ git checkout -f
 ```
 4. Make the post-receive file executable
 
-```
+``` bash
 $ chmod +x hooks/post-receive
 ```
 
 5. Configure `hooks/post-update` file
-```
+``` bash
 #!/bin/sh
 #
 # This hook does two things:
@@ -108,7 +108,7 @@ update_wc() {
         then
 ```
 6. Make `hooks/post-update` executible
-```
+``` bash
 $ chmod +x post-update
 ```
 
