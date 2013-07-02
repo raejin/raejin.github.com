@@ -13,7 +13,7 @@ Last week I ran to an UNIX tutor asking some dumb questions from the text, and I
 
 Here it goes, I need to remind myself how dumb I was/am and hopefully I stay motivated to be an effective engineer.
 
-``` shell
+```
 $ cat someFile | comm -12 - anotherFile
 ```
 
