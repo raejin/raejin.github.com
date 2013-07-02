@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JavaScript | WATCH AND LEARN]]></title>
+  <link href="http://raejin.github.com/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://raejin.github.com/"/>
+  <updated>2013-07-01T21:35:11-07:00</updated>
+  <id>http://raejin.github.com/</id>
+  <author>
+    <name><![CDATA[Rae Liu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Readings for the Summer]]></title>
+    <link href="http://raejin.github.com/blog/2013/05/19/readings-for-the-summer/"/>
+    <updated>2013-05-19T21:14:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/05/19/readings-for-the-summer</id>
+    <content type="html"><![CDATA[<p>Hello! Summer 2013 officially started :-)</p>
+
+<p>Today is the second day of the summer, and I feel pretty good about having a fresh start despite the fact that I did waste yesterday just to have beers with my friends. All in all, life’s good after the final exams, YAY!</p>
+
+<p>This summer I will be working on Ruby on Sinatra, along with some light-weight front-end framework. Therefore, in order to get ready for my internship, I am setting up a reading list so that I don’t just blindly work on something without understanding the fundamentals.</p>
+
+<p>Although I don’t think the project I will be working on requires any kind of sophisticated front-end work, I still want to learn the trendy hipster-ish front-end JavaScript frameworks like AngularJS, KnockoutJS, or EmberJS.</p>
+
+<p>Here is the reading list of the books and the useful tutorials:</p>
+
+<h3>Online resources</h3>
+
+<ul>
+<li><a href="http://www.youtube.com/playlist?list=PLP6DbQBkn9ymGQh2qpk9ImLHdSH5T7yw7">AngularJS video tutorial on Egghead.io</a></li>
+<li><a href="http://contribute.jquery.org/style-guide/js/">JavaScript Style Guide by jQuery</a></li>
+<li><a href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide (Re-read again)</a></li>
+<li><a href="http://rubysource.com/rails-development-101-rvm/">Rails Intro, Deep Dive: RVM</a></li>
+<li><a href="http://www.sinatrarb.com/intro.html">Sinatra Intro</a></li>
+<li><a href="http://sass-lang.com/">Sass</a></li>
+<li><a href="http://haml.info/">Haml</a></li>
+<li><a href="http://coffeescript.org/">CoffeeScript</a></li>
+</ul>
+
+
+<h3>Books reference</h3>
+
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920019664.do">Sinatra: Up and Running</a></li>
+<li><a href="http://shop.oreilly.com/product/9780596517748.do">JavaScript The Good Parts</a></li>
+<li><a href="http://shop.oreilly.com/product/9780596529307.do">High Performance Web Sites - Essential Knowledge for Front-End Engineers</a></li>
+<li><a href="http://ruby.railstutorial.org/">Ruby on Rails Tutorial, Second Edition</a></li>
+<li><a href="http://pragprog.com/book/ruby3/programming-ruby-1-9">Programming Ruby: The Pragmatic Programmers’ Guide</a></li>
+</ul>
+
+
+<p>So far I found Ruby very magical and pseudo-intuitive to learn, but as coming from a less-dynamic programming language, I sometimes found I am doing too much work for what should’ve been done in two lines of code. I need to practice write less code in Ruby to achieve maximum efficiency. I will continue to update this list as I found useful resources.</p>
+
+<p>It’s already a great start, cheers Rae!</p>
+]]></content>
+  </entry>
+  
+</feed>
