@@ -2,34 +2,38 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://raejin.github.com/blog/2013/03/13/a-new-start/</loc>
-        <lastmod>2013-06-15T12:12:16-07:00</lastmod>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/03/27/blog-for-hackers/</loc>
-        <lastmod>2013-06-15T12:12:16-07:00</lastmod>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://raejin.github.com/blog/2013/07/01/ec2-adventurous/</loc>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/404.html</loc>
-        <lastmod>2013-06-15T12:12:16-07:00</lastmod>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/about/</loc>
-        <lastmod>2013-06-15T12:12:16-07:00</lastmod>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/archives/</loc>
-        <lastmod>2013-06-15T12:12:16-07:00</lastmod>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/discuss/</loc>
-        <lastmod>2013-06-15T12:12:16-07:00</lastmod>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/</loc>
-        <lastmod>2013-06-15T12:12:16-07:00</lastmod>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/robots.txt</loc>
-        <lastmod>2013-06-15T12:12:16-07:00</lastmod>
+        <lastmod>2013-07-01T20:51:17-07:00</lastmod>
     </url>
 </urlset>

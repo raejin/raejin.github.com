@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hack | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/hack/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-06-15T12:13:44-07:00</updated>
+  <updated>2013-07-01T20:51:22-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -51,9 +51,7 @@ for(var i = 0; i &lt; aTags.length; i++) {</p>
 <p>}
 ```</p>
 
-<p><div><script src='https://gist.github.com/465698.js'></script>
-<noscript><pre><code></code></pre></noscript></div>
-</p>
+<p>{% gist 465698 %}</p>
 ]]></content>
   </entry>
   
