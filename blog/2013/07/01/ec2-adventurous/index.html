@@ -152,8 +152,9 @@
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com "cat &gt;&gt; ~/.ssh/authorized_keys"</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com <span class="s2">&quot;cat &gt;&gt; ~/.ssh/authorized_keys&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <ol>
@@ -161,10 +162,11 @@
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir website.git && cd website.git
-</span><span class='line'>$ git init --bare</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>mkdir website.git <span class="o">&amp;&amp;</span> <span class="nb">cd </span>website.git
+</span><span class='line'><span class="nv">$ </span>git init --bare
+</span></code></pre></td></tr></table></div></figure>
 
 
 <ol>
@@ -172,16 +174,17 @@
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat &gt; hooks/post-receive
-</span><span class='line'>#!/bin/sh
-</span><span class='line'>GIT_WORK_TREE=/home/ubuntu/website
-</span><span class='line'>export GIT_WORK_TREE
-</span><span class='line'>git checkout -f</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cat &gt; hooks/post-receive
+</span><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'><span class="nv">GIT_WORK_TREE</span><span class="o">=</span>/home/ubuntu/website
+</span><span class='line'><span class="nb">export </span>GIT_WORK_TREE
+</span><span class='line'>git checkout -f
+</span></code></pre></td></tr></table></div></figure>
 
 
 <ol>
@@ -189,8 +192,9 @@
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ chmod +x hooks/post-receive</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>chmod +x hooks/post-receive
+</span></code></pre></td></tr></table></div></figure>
 
 
 <ol>
@@ -198,7 +202,7 @@
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -253,61 +257,62 @@
 <span class='line-number'>53</span>
 <span class='line-number'>54</span>
 <span class='line-number'>55</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/sh
-</span><span class='line'>#
-</span><span class='line'># This hook does two things:
-</span><span class='line'>#
-</span><span class='line'>#  1. update the "info" files that allow the list of references to be
-</span><span class='line'>#     queries over dumb transports such as http
-</span><span class='line'>#
-</span><span class='line'>#  2. if this repository looks like it is a non-bare repository, and
-</span><span class='line'>#     the checked-out branch is pushed to, then update the working copy.
-</span><span class='line'>#     This makes "push" function somewhat similarly to darcs and bzr.
-</span><span class='line'>#
-</span><span class='line'># To enable this hook, make this file executable by "chmod +x post-update".
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># This hook does two things:</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c">#  1. update the &quot;info&quot; files that allow the list of references to be</span>
+</span><span class='line'><span class="c">#     queries over dumb transports such as http</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c">#  2. if this repository looks like it is a non-bare repository, and</span>
+</span><span class='line'><span class="c">#     the checked-out branch is pushed to, then update the working copy.</span>
+</span><span class='line'><span class="c">#     This makes &quot;push&quot; function somewhat similarly to darcs and bzr.</span>
+</span><span class='line'><span class="c">#</span>
+</span><span class='line'><span class="c"># To enable this hook, make this file executable by &quot;chmod +x post-update&quot;.</span>
 </span><span class='line'>
 </span><span class='line'>git update-server-info
 </span><span class='line'>
-</span><span class='line'>is_bare=$(git config --get --bool core.bare)
+</span><span class='line'><span class="nv">is_bare</span><span class="o">=</span><span class="k">$(</span>git config --get --bool core.bare<span class="k">)</span>
 </span><span class='line'>
-</span><span class='line'>if [ -z "$is_bare" ]
-</span><span class='line'>then
-</span><span class='line'>        # for compatibility's sake, guess
-</span><span class='line'>        git_dir_full=$(cd $GIT_DIR; pwd)
-</span><span class='line'>        case $git_dir_full in */.git) is_bare=false;; *) is_bare=true;; esac
-</span><span class='line'>fi
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;$is_bare&quot;</span> <span class="o">]</span>
+</span><span class='line'><span class="k">then</span>
+</span><span class='line'>        <span class="c"># for compatibility&#39;s sake, guess</span>
+</span><span class='line'>        <span class="nv">git_dir_full</span><span class="o">=</span><span class="k">$(</span><span class="nb">cd</span> <span class="nv">$GIT_DIR</span>; <span class="nb">pwd</span><span class="k">)</span>
+</span><span class='line'>        <span class="k">case</span> <span class="nv">$git_dir_full</span> in */.git<span class="o">)</span> <span class="nv">is_bare</span><span class="o">=</span><span class="nb">false</span>;; *<span class="o">)</span> <span class="nv">is_bare</span><span class="o">=</span><span class="nb">true</span>;; <span class="k">esac</span>
+</span><span class='line'><span class="k">fi</span>
 </span><span class='line'>
-</span><span class='line'>update_wc() {
-</span><span class='line'>        ref=$1
-</span><span class='line'>        echo "Push to checked out branch $ref" &gt;&2
-</span><span class='line'>        if [ ! -f $GIT_DIR/logs/HEAD ]
-</span><span class='line'>        then
-</span><span class='line'>                echo "E:push to non-bare repository requires a HEAD reflog" &gt;&2
-</span><span class='line'>                exit 1
-</span><span class='line'>        fi
-</span><span class='line'>        if (cd $GIT_WORK_TREE; git diff-files -q --exit-code &gt;/dev/null)
-</span><span class='line'>        then
-</span><span class='line'>                wc_dirty=0
-</span><span class='line'>        else
-</span><span class='line'>                echo "W:unstaged changes found in working copy" &gt;&2
-</span><span class='line'>                wc_dirty=1
-</span><span class='line'>                desc="working copy"
-</span><span class='line'>        fi
-</span><span class='line'>        if git diff-index --cached HEAD@{1} &gt;/dev/null
-</span><span class='line'>        then
-</span><span class='line'>                index_dirty=0
-</span><span class='line'>        else
-</span><span class='line'>                echo "W:uncommitted, staged changes found" &gt;&2
-</span><span class='line'>                index_dirty=1
-</span><span class='line'>                if [ -n "$desc" ]
-</span><span class='line'>                then
-</span><span class='line'>                        desc="$desc and index"
-</span><span class='line'>                else
-</span><span class='line'>                        desc="index"
-</span><span class='line'>                fi
-</span><span class='line'>        fi
-</span><span class='line'>        if [ "$wc_dirty" -ne 0 -o "$index_dirty" -ne 0 ]
-</span><span class='line'>        then</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>update_wc<span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="nv">ref</span><span class="o">=</span><span class="nv">$1</span>
+</span><span class='line'>        <span class="nb">echo</span> <span class="s2">&quot;Push to checked out branch $ref&quot;</span> &gt;&amp;2
+</span><span class='line'>        <span class="k">if</span> <span class="o">[</span> ! -f <span class="nv">$GIT_DIR</span>/logs/HEAD <span class="o">]</span>
+</span><span class='line'>        <span class="k">then</span>
+</span><span class='line'><span class="k">                </span><span class="nb">echo</span> <span class="s2">&quot;E:push to non-bare repository requires a HEAD reflog&quot;</span> &gt;&amp;2
+</span><span class='line'>                <span class="nb">exit </span>1
+</span><span class='line'>        <span class="k">fi</span>
+</span><span class='line'><span class="k">        if</span> <span class="o">(</span><span class="nb">cd</span> <span class="nv">$GIT_WORK_TREE</span>; git diff-files -q --exit-code &gt;/dev/null<span class="o">)</span>
+</span><span class='line'>        <span class="k">then</span>
+</span><span class='line'><span class="k">                </span><span class="nv">wc_dirty</span><span class="o">=</span>0
+</span><span class='line'>        <span class="k">else</span>
+</span><span class='line'><span class="k">                </span><span class="nb">echo</span> <span class="s2">&quot;W:unstaged changes found in working copy&quot;</span> &gt;&amp;2
+</span><span class='line'>                <span class="nv">wc_dirty</span><span class="o">=</span>1
+</span><span class='line'>                <span class="nv">desc</span><span class="o">=</span><span class="s2">&quot;working copy&quot;</span>
+</span><span class='line'>        <span class="k">fi</span>
+</span><span class='line'><span class="k">        if </span>git diff-index --cached HEAD@<span class="o">{</span>1<span class="o">}</span> &gt;/dev/null
+</span><span class='line'>        <span class="k">then</span>
+</span><span class='line'><span class="k">                </span><span class="nv">index_dirty</span><span class="o">=</span>0
+</span><span class='line'>        <span class="k">else</span>
+</span><span class='line'><span class="k">                </span><span class="nb">echo</span> <span class="s2">&quot;W:uncommitted, staged changes found&quot;</span> &gt;&amp;2
+</span><span class='line'>                <span class="nv">index_dirty</span><span class="o">=</span>1
+</span><span class='line'>                <span class="k">if</span> <span class="o">[</span> -n <span class="s2">&quot;$desc&quot;</span> <span class="o">]</span>
+</span><span class='line'>                <span class="k">then</span>
+</span><span class='line'><span class="k">                        </span><span class="nv">desc</span><span class="o">=</span><span class="s2">&quot;$desc and index&quot;</span>
+</span><span class='line'>                <span class="k">else</span>
+</span><span class='line'><span class="k">                        </span><span class="nv">desc</span><span class="o">=</span><span class="s2">&quot;index&quot;</span>
+</span><span class='line'>                <span class="k">fi</span>
+</span><span class='line'><span class="k">        fi</span>
+</span><span class='line'><span class="k">        if</span> <span class="o">[</span> <span class="s2">&quot;$wc_dirty&quot;</span> -ne 0 -o <span class="s2">&quot;$index_dirty&quot;</span> -ne 0 <span class="o">]</span>
+</span><span class='line'>        <span class="k">then</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <ol>
@@ -315,8 +320,9 @@
 </ol>
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ chmod +x post-update</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>chmod +x post-update
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Reference</p>

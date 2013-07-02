@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geek | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/geek/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-07-01T21:51:36-07:00</updated>
+  <updated>2013-07-01T21:56:48-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -38,16 +38,16 @@
 
 <ol>
 <li>Copy local machine public key to the remote server (ec2 instance)
-<code>
+<code>bash
 $ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com "cat &gt;&gt; ~/.ssh/authorized_keys"
 </code></li>
 <li>Create and initialize a new git repo
-<code>
+<code>bash
 $ mkdir website.git &amp;&amp; cd website.git
 $ git init --bare
 </code></li>
 <li>Configure the post-receive hook in order to put the files into desired directory
-```
+``` bash
 $ cat > hooks/post-receive
 
 <h1>!/bin/sh</h1>
@@ -60,13 +60,13 @@ git checkout -f
 </ol>
 
 
-<p><code>
+<p><code>bash
 $ chmod +x hooks/post-receive
 </code></p>
 
 <ol>
 <li>Configure <code>hooks/post-update</code> file
-```
+``` bash
 
 <h1>!/bin/sh</h1>
 
@@ -144,7 +144,7 @@ then</p>
 
 <p><code>
 6. Make `hooks/post-update` executible
-</code>
+</code> bash
 $ chmod +x post-update
 ```</p>
 
@@ -230,7 +230,7 @@ $ chmod +x post-update
 
 <p>Here it goes, I need to remind myself how dumb I was/am and hopefully I stay motivated to be an effective engineer.</p>
 
-<p><code>
+<p><code>bash
 $ cat someFile | comm -12 - anotherFile
 </code></p>
 
