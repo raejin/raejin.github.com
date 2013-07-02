@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tools | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-07-01T21:39:01-07:00</updated>
+  <updated>2013-07-01T21:40:45-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -38,16 +38,16 @@
 
 <ol>
 <li>Copy local machine public key to the remote server (ec2 instance)
-<code>shell
+<code>
 $ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com "cat &gt;&gt; ~/.ssh/authorized_keys"
 </code></li>
 <li>Create and initialize a new git repo
-<code>shell
+<code>
 $ mkdir website.git &amp;&amp; cd website.git
 $ git init --bare
 </code></li>
 <li>Configure the post-receive hook in order to put the files into desired directory
-``` shell
+```
 $ cat > hooks/post-receive
 
 <h1>!/bin/sh</h1>
@@ -60,13 +60,13 @@ git checkout -f
 </ol>
 
 
-<p><code>shell
+<p><code>
 $ chmod +x hooks/post-receive
 </code></p>
 
 <ol>
 <li>Configure <code>hooks/post-update</code> file
-``` shell
+```
 
 <h1>!/bin/sh</h1>
 
@@ -144,7 +144,7 @@ then</p>
 
 <p><code>
 6. Make `hooks/post-update` executible
-</code> shell
+</code>
 $ chmod +x post-update
 ```</p>
 

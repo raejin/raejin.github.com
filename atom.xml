@@ -4,7 +4,7 @@
   <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-06-15T12:13:44-07:00</updated>
+  <updated>2013-07-01T21:40:45-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,6 +12,326 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[EC2 adventurous]]></title>
+    <link href="http://raejin.github.com/blog/2013/07/01/ec2-adventurous/"/>
+    <updated>2013-07-01T21:38:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/07/01/ec2-adventurous</id>
+    <content type="html"><![CDATA[<p>It&#8217;s already July! Omg time flies when it comes to summer time.</p>
+
+<p>Update: recently I&#8217;ve been very involved in my internship project. I can&#8217;t expose the detail but basically I am working with AngularJS extensively. Though I am still very far from an experienced AngularJS developer, I must say IT IS A BEAUTIFUL WEB FRONT-END FRAMEWORK.</p>
+
+<p>Currently I am working on a project called &#8220;yolyo&#8221; (temporarily name), which is based on an open source forum Discourse. Since Discourse requires quite a bit of computing resources, I decided to use Amazon EC2 as our starting point. As I realized how important it is to configure a virtual instance, I would like to dedicate this post to document all the works I&#8217;ve put into to make things work smoothly.</p>
+
+<p>First of all, I would like to thank BitNami providing one-click Discourse installation to deploy on EC2. Otherwise, I would&#8217;ve still struggled with all the nitty gritty deployment detail.</p>
+
+<h1>How to deploy/update by Git</h1>
+
+<p>This has confused me for a long while. I had been used to deploy virtually everything by drag and drop for so long. Though I&#8217;ve learnt how to use Git to do versioning, I do not know how to setup the cloud server so that I can simply do <code>git push origin master</code> to deploy the changes.</p>
+
+<p>Although I finally figured out how to use Git to deploy remote instance, I realized this workflow doesn&#8217;t work really well with Discourse. Discourse itself already contains a git repo, so I would need to push to a remote repo and deploy the instance by pulling from this remote repo. (If anyone knows a better deployment strategy, please let me know)</p>
+
+<h2>On remote machine</h2>
+
+<p>create a git repo as a transition to deploy to a designated directory</p>
+
+<ol>
+<li>Copy local machine public key to the remote server (ec2 instance)</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com "cat &gt;&gt; ~/.ssh/authorized_keys"</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Create and initialize a new git repo</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir website.git && cd website.git
+</span><span class='line'>$ git init --bare</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Configure the post-receive hook in order to put the files into desired directory</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat &gt; hooks/post-receive
+</span><span class='line'>#!/bin/sh
+</span><span class='line'>GIT_WORK_TREE=/home/ubuntu/website
+</span><span class='line'>export GIT_WORK_TREE
+</span><span class='line'>git checkout -f</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Make the post-receive file executable</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ chmod +x hooks/post-receive</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Configure <code>hooks/post-update</code> file</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/sh
+</span><span class='line'>#
+</span><span class='line'># This hook does two things:
+</span><span class='line'>#
+</span><span class='line'>#  1. update the "info" files that allow the list of references to be
+</span><span class='line'>#     queries over dumb transports such as http
+</span><span class='line'>#
+</span><span class='line'>#  2. if this repository looks like it is a non-bare repository, and
+</span><span class='line'>#     the checked-out branch is pushed to, then update the working copy.
+</span><span class='line'>#     This makes "push" function somewhat similarly to darcs and bzr.
+</span><span class='line'>#
+</span><span class='line'># To enable this hook, make this file executable by "chmod +x post-update".
+</span><span class='line'>
+</span><span class='line'>git update-server-info
+</span><span class='line'>
+</span><span class='line'>is_bare=$(git config --get --bool core.bare)
+</span><span class='line'>
+</span><span class='line'>if [ -z "$is_bare" ]
+</span><span class='line'>then
+</span><span class='line'>        # for compatibility's sake, guess
+</span><span class='line'>        git_dir_full=$(cd $GIT_DIR; pwd)
+</span><span class='line'>        case $git_dir_full in */.git) is_bare=false;; *) is_bare=true;; esac
+</span><span class='line'>fi
+</span><span class='line'>
+</span><span class='line'>update_wc() {
+</span><span class='line'>        ref=$1
+</span><span class='line'>        echo "Push to checked out branch $ref" &gt;&2
+</span><span class='line'>        if [ ! -f $GIT_DIR/logs/HEAD ]
+</span><span class='line'>        then
+</span><span class='line'>                echo "E:push to non-bare repository requires a HEAD reflog" &gt;&2
+</span><span class='line'>                exit 1
+</span><span class='line'>        fi
+</span><span class='line'>        if (cd $GIT_WORK_TREE; git diff-files -q --exit-code &gt;/dev/null)
+</span><span class='line'>        then
+</span><span class='line'>                wc_dirty=0
+</span><span class='line'>        else
+</span><span class='line'>                echo "W:unstaged changes found in working copy" &gt;&2
+</span><span class='line'>                wc_dirty=1
+</span><span class='line'>                desc="working copy"
+</span><span class='line'>        fi
+</span><span class='line'>        if git diff-index --cached HEAD@{1} &gt;/dev/null
+</span><span class='line'>        then
+</span><span class='line'>                index_dirty=0
+</span><span class='line'>        else
+</span><span class='line'>                echo "W:uncommitted, staged changes found" &gt;&2
+</span><span class='line'>                index_dirty=1
+</span><span class='line'>                if [ -n "$desc" ]
+</span><span class='line'>                then
+</span><span class='line'>                        desc="$desc and index"
+</span><span class='line'>                else
+</span><span class='line'>                        desc="index"
+</span><span class='line'>                fi
+</span><span class='line'>        fi
+</span><span class='line'>        if [ "$wc_dirty" -ne 0 -o "$index_dirty" -ne 0 ]
+</span><span class='line'>        then</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Make <code>hooks/post-update</code> executible</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ chmod +x post-update</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Reference</p>
+
+<ul>
+<li><a href="http://www.jeffhoefs.com/2012/09/setup-git-deploy-for-aws-ec2-ubuntu-instance/">Setup git deploy for AWS ec2 Ubuntu instance</a></li>
+<li><a href="http://stackoverflow.com/questions/225291/git-upload-pack-command-not-found-how-to-fix-this-correctly">StackOverflow - git-upload-pack: command not found, how to fix this correctly</a></li>
+<li><a href="http://alestic.com/2010/10/ec2-ssh-keys">Uploading Personal ssh Keys to Amazon EC2 </a></li>
+<li><a href="http://blog.gbinghan.com/2012/05/setting-up-repo-on-amazon-ec2-for-git.html">Setting up Repo on Amazon EC2 for Git Push </a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Readings for the Summer]]></title>
+    <link href="http://raejin.github.com/blog/2013/05/19/readings-for-the-summer/"/>
+    <updated>2013-05-19T21:14:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/05/19/readings-for-the-summer</id>
+    <content type="html"><![CDATA[<p>Hello! Summer 2013 officially started :-)</p>
+
+<p>Today is the second day of the summer, and I feel pretty good about having a fresh start despite the fact that I did waste yesterday just to have beers with my friends. All in all, life’s good after the final exams, YAY!</p>
+
+<p>This summer I will be working on Ruby on Sinatra, along with some light-weight front-end framework. Therefore, in order to get ready for my internship, I am setting up a reading list so that I don’t just blindly work on something without understanding the fundamentals.</p>
+
+<p>Although I don’t think the project I will be working on requires any kind of sophisticated front-end work, I still want to learn the trendy hipster-ish front-end JavaScript frameworks like AngularJS, KnockoutJS, or EmberJS.</p>
+
+<p>Here is the reading list of the books and the useful tutorials:</p>
+
+<h3>Online resources</h3>
+
+<ul>
+<li><a href="http://www.youtube.com/playlist?list=PLP6DbQBkn9ymGQh2qpk9ImLHdSH5T7yw7">AngularJS video tutorial on Egghead.io</a></li>
+<li><a href="http://contribute.jquery.org/style-guide/js/">JavaScript Style Guide by jQuery</a></li>
+<li><a href="https://github.com/airbnb/javascript">Airbnb JavaScript Style Guide (Re-read again)</a></li>
+<li><a href="http://rubysource.com/rails-development-101-rvm/">Rails Intro, Deep Dive: RVM</a></li>
+<li><a href="http://www.sinatrarb.com/intro.html">Sinatra Intro</a></li>
+<li><a href="http://sass-lang.com/">Sass</a></li>
+<li><a href="http://haml.info/">Haml</a></li>
+<li><a href="http://coffeescript.org/">CoffeeScript</a></li>
+</ul>
+
+
+<h3>Books reference</h3>
+
+<ul>
+<li><a href="http://shop.oreilly.com/product/0636920019664.do">Sinatra: Up and Running</a></li>
+<li><a href="http://shop.oreilly.com/product/9780596517748.do">JavaScript The Good Parts</a></li>
+<li><a href="http://shop.oreilly.com/product/9780596529307.do">High Performance Web Sites - Essential Knowledge for Front-End Engineers</a></li>
+<li><a href="http://ruby.railstutorial.org/">Ruby on Rails Tutorial, Second Edition</a></li>
+<li><a href="http://pragprog.com/book/ruby3/programming-ruby-1-9">Programming Ruby: The Pragmatic Programmers’ Guide</a></li>
+</ul>
+
+
+<p>So far I found Ruby very magical and pseudo-intuitive to learn, but as coming from a less-dynamic programming language, I sometimes found I am doing too much work for what should’ve been done in two lines of code. I need to practice write less code in Ruby to achieve maximum efficiency. I will continue to update this list as I found useful resources.</p>
+
+<p>It’s already a great start, cheers Rae!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[SelfControl Saves My Final Grades]]></title>
+    <link href="http://raejin.github.com/blog/2013/05/15/selfcontrol-saves-my-final-grades/"/>
+    <updated>2013-05-15T21:13:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/05/15/selfcontrol-saves-my-final-grades</id>
+    <content type="html"><![CDATA[<p>Alright, I know the title is a bit off. I could’ve still suffered if I don’t study well enough to handle the finals. I’ve discovered a OSX application called SelfControl to prevent me from wondering on social websites occasionally for a period of time.</p>
+
+<p><a href="http://selfcontrolapp.com/">This app</a> is really awesome if you are the kind of person like me who lacks self-discipline whenever there is a need to focus. Well, mainly the reason is I don’t really like the material and it is hard in general, so that pushed me off from being proactive about the finals.</p>
+
+<p>Fortunately, this app is powerful enough to keep me from cracking the rules. It claims that after the rules are set, there is no way to break the rules even uninstalling the app. So there you have it! In case someone is looking for some help to get focused studying for exams.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Long Does It Take a Noob to Master UNIX Commands?]]></title>
+    <link href="http://raejin.github.com/blog/2013/04/25/how-long-does-it-take-a-noob-to-master-unix-commands/"/>
+    <updated>2013-04-25T21:12:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/04/25/how-long-does-it-take-a-noob-to-master-unix-commands</id>
+    <content type="html"><![CDATA[<p>This semester I am taking a self-paced UNIX class, which is a lot more fun compared to the other theoretical-ish computer courses. Sometimes I really lack motivation to learn effective UNIX commands to make my life easier. And I don’t think I’m alone, but in order to be a legit software enginner I must at least not suck at the basics.</p>
+
+<p>Last week I ran to an UNIX tutor asking some dumb questions from the text, and I finally realized that piping is not restricted to a single input command! I wonder why it took me so long to notice this trivial fact, why!!!!????</p>
+
+<p>Here it goes, I need to remind myself how dumb I was/am and hopefully I stay motivated to be an effective engineer.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat someFile | comm -12 - anotherFile</span></code></pre></td></tr></table></div></figure>
+
+
+<p>It’s the hyphen that makes this works beautifully! Who would have thought of using hyphen? Who?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Internship for Summer 2013]]></title>
+    <link href="http://raejin.github.com/blog/2013/04/06/internship-for-summer-2013/"/>
+    <updated>2013-04-06T21:11:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/04/06/internship-for-summer-2013</id>
+    <content type="html"><![CDATA[<p>I have been very busy interviewing for my internship opportunities. And it went quite well despite the fact that I got a rejection from a startup. At first, I was a little bit disappointed about how I blew the second phone interview. However, I quickly resumed my confidence as I kept getting email requesting interviews. Overall, the internship recruiting experience has been positive and I’ve learned tons of tips on things like “how to make your first impression” or “bugging the recruiters you know until you get an interview”. If it wasn’t my sister who is experienced with all of this, I could’ve been still blindly submitting my not-so-impressive resume electronically.</p>
+
+<p>So I ended up taking the offer from Autodesk. Weird right? They are well-known for AutoCAD, and lots of 3D design software suite that are widely used in different industries. But why Autodesk? The most important determinant for me is the degree of impact I would make for a job, as well as the level of experience I would learn from the developers. Also, I originally set up a list of the language or frameworks that I want to learn/master for this summer. It turns out that I am going to use Ruby on Rails as the back-end to develop the project, which is great. Because I really need to learn Ruby on Rails by practical implementation.</p>
+
+<p>I just need to take good care of the rest of the semester and occasionally learn Ruby on Rails from time to time before the first day of my internship! Woot woot!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hex Color Picker for Mac]]></title>
+    <link href="http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac/"/>
+    <updated>2013-04-06T21:08:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac</id>
+    <content type="html"><![CDATA[<p>Whenever I need to decide a specific color to use, I always consult my sweet Photoshop CS6 since it runs pretty smooth on my laptop. But this is an overkill, opening up Photoshop simply for picking a color sounds so stupid and I’ve been doing this for years.</p>
+
+<p>Luckily, I stumble upon <a href="http://yuji.wordpress.com/2010/08/01/mac-adding-hex-color-picker-to-color-picker/">this article</a> about how to configure a light-weight hex color picker app on a Mac. Although the article clearly maps out all the steps, I am still presenting it here:</p>
+
+<ol>
+<li>Download <a href="http://wafflesoftware.net/hexpicker/">Hex Color Picker</a></li>
+<li>Open AppleScript Editor</li>
+<li>Write the desired app name i.e. <code>ColorPicker</code></li>
+<li>Save as a file with <code>.app</code> as file extension</li>
+<li>Move the file <code>HexColorPicker.colorPicker</code> to <code>~/Library/ColorPickers</code></li>
+</ol>
+
+
+<p>Simple, elegant, no more Photoshop :)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Blog for hackers?]]></title>

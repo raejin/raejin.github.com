@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <title>EC2 adventurous - WATCH AND LEARN</title>
+  <meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
+  <meta name="author" content="Rae Liu">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+  <meta name="description" content="It&#8217;s already July! Omg time flies when it comes to summer time. Update: recently I&#8217;ve been very involved in my internship project. I can &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://raejin.github.com/blog/2013/07/01/ec2-adventurous">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/watch.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css" />
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.googleapis.com/css?family=Averia+Sans+Libre|Noto+Sans|Donegal+One" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="WATCH AND LEARN" type="application/atom+xml">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascripts/wal.js" type="text/javascript"></script>
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="//cdn.moot.it/latest/moot.min.js"></script>
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39687126-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><aside class="botm">
+  <ul>
+    <li><a href="/about">/about</a></li>
+    <li><a href="/blog/archives">/archives</a></li>
+    <li><a href="//twitter.com/liuraejin">/twitter</a></li>
+    <li><a href="//github.com/raejin">/github</a></li>
+  </ul>
+</aside>
+<aside class="lft">
+  <ul>
+    <li><a href="/discuss">/discuss</a></li>
+  </ul>
+</aside>
+<hgroup>
+  <h1><a href="/">WATCH AND LEARN</a></h1>
+  
+    <h2>I learn by doing and seeing</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:raejin.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">EC2 Adventurous</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+[ <time datetime="2013-07-01T21:38:00-07:00" pubdate data-updated="true">Jul  1, 2013</time> ] 
+
+[ Tags <span class="categories">
+  
+    <a class='category' href='/blog/categories/geek/'>geek</a>, <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/tools/'>tools</a>
+  
+</span> ]
+
+
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>It&#8217;s already July! Omg time flies when it comes to summer time.</p>
+
+<p>Update: recently I&#8217;ve been very involved in my internship project. I can&#8217;t expose the detail but basically I am working with AngularJS extensively. Though I am still very far from an experienced AngularJS developer, I must say IT IS A BEAUTIFUL WEB FRONT-END FRAMEWORK.</p>
+
+<p>Currently I am working on a project called &#8220;yolyo&#8221; (temporarily name), which is based on an open source forum Discourse. Since Discourse requires quite a bit of computing resources, I decided to use Amazon EC2 as our starting point. As I realized how important it is to configure a virtual instance, I would like to dedicate this post to document all the works I&#8217;ve put into to make things work smoothly.</p>
+
+<p>First of all, I would like to thank BitNami providing one-click Discourse installation to deploy on EC2. Otherwise, I would&#8217;ve still struggled with all the nitty gritty deployment detail.</p>
+
+<h1>How to deploy/update by Git</h1>
+
+<p>This has confused me for a long while. I had been used to deploy virtually everything by drag and drop for so long. Though I&#8217;ve learnt how to use Git to do versioning, I do not know how to setup the cloud server so that I can simply do <code>git push origin master</code> to deploy the changes.</p>
+
+<p>Although I finally figured out how to use Git to deploy remote instance, I realized this workflow doesn&#8217;t work really well with Discourse. Discourse itself already contains a git repo, so I would need to push to a remote repo and deploy the instance by pulling from this remote repo. (If anyone knows a better deployment strategy, please let me know)</p>
+
+<h2>On remote machine</h2>
+
+<p>create a git repo as a transition to deploy to a designated directory</p>
+
+<ol>
+<li>Copy local machine public key to the remote server (ec2 instance)</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com "cat &gt;&gt; ~/.ssh/authorized_keys"</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Create and initialize a new git repo</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ mkdir website.git && cd website.git
+</span><span class='line'>$ git init --bare</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Configure the post-receive hook in order to put the files into desired directory</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ cat &gt; hooks/post-receive
+</span><span class='line'>#!/bin/sh
+</span><span class='line'>GIT_WORK_TREE=/home/ubuntu/website
+</span><span class='line'>export GIT_WORK_TREE
+</span><span class='line'>git checkout -f</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Make the post-receive file executable</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ chmod +x hooks/post-receive</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Configure <code>hooks/post-update</code> file</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/sh
+</span><span class='line'>#
+</span><span class='line'># This hook does two things:
+</span><span class='line'>#
+</span><span class='line'>#  1. update the "info" files that allow the list of references to be
+</span><span class='line'>#     queries over dumb transports such as http
+</span><span class='line'>#
+</span><span class='line'>#  2. if this repository looks like it is a non-bare repository, and
+</span><span class='line'>#     the checked-out branch is pushed to, then update the working copy.
+</span><span class='line'>#     This makes "push" function somewhat similarly to darcs and bzr.
+</span><span class='line'>#
+</span><span class='line'># To enable this hook, make this file executable by "chmod +x post-update".
+</span><span class='line'>
+</span><span class='line'>git update-server-info
+</span><span class='line'>
+</span><span class='line'>is_bare=$(git config --get --bool core.bare)
+</span><span class='line'>
+</span><span class='line'>if [ -z "$is_bare" ]
+</span><span class='line'>then
+</span><span class='line'>        # for compatibility's sake, guess
+</span><span class='line'>        git_dir_full=$(cd $GIT_DIR; pwd)
+</span><span class='line'>        case $git_dir_full in */.git) is_bare=false;; *) is_bare=true;; esac
+</span><span class='line'>fi
+</span><span class='line'>
+</span><span class='line'>update_wc() {
+</span><span class='line'>        ref=$1
+</span><span class='line'>        echo "Push to checked out branch $ref" &gt;&2
+</span><span class='line'>        if [ ! -f $GIT_DIR/logs/HEAD ]
+</span><span class='line'>        then
+</span><span class='line'>                echo "E:push to non-bare repository requires a HEAD reflog" &gt;&2
+</span><span class='line'>                exit 1
+</span><span class='line'>        fi
+</span><span class='line'>        if (cd $GIT_WORK_TREE; git diff-files -q --exit-code &gt;/dev/null)
+</span><span class='line'>        then
+</span><span class='line'>                wc_dirty=0
+</span><span class='line'>        else
+</span><span class='line'>                echo "W:unstaged changes found in working copy" &gt;&2
+</span><span class='line'>                wc_dirty=1
+</span><span class='line'>                desc="working copy"
+</span><span class='line'>        fi
+</span><span class='line'>        if git diff-index --cached HEAD@{1} &gt;/dev/null
+</span><span class='line'>        then
+</span><span class='line'>                index_dirty=0
+</span><span class='line'>        else
+</span><span class='line'>                echo "W:uncommitted, staged changes found" &gt;&2
+</span><span class='line'>                index_dirty=1
+</span><span class='line'>                if [ -n "$desc" ]
+</span><span class='line'>                then
+</span><span class='line'>                        desc="$desc and index"
+</span><span class='line'>                else
+</span><span class='line'>                        desc="index"
+</span><span class='line'>                fi
+</span><span class='line'>        fi
+</span><span class='line'>        if [ "$wc_dirty" -ne 0 -o "$index_dirty" -ne 0 ]
+</span><span class='line'>        then</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Make <code>hooks/post-update</code> executible</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ chmod +x post-update</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Reference</p>
+
+<ul>
+<li><a href="http://www.jeffhoefs.com/2012/09/setup-git-deploy-for-aws-ec2-ubuntu-instance/">Setup git deploy for AWS ec2 Ubuntu instance</a></li>
+<li><a href="http://stackoverflow.com/questions/225291/git-upload-pack-command-not-found-how-to-fix-this-correctly">StackOverflow - git-upload-pack: command not found, how to fix this correctly</a></li>
+<li><a href="http://alestic.com/2010/10/ec2-ssh-keys">Uploading Personal ssh Keys to Amazon EC2 </a></li>
+<li><a href="http://blog.gbinghan.com/2012/05/setting-up-repo-on-amazon-ec2-for-git.html">Setting up Repo on Amazon EC2 for Git Push </a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/05/19/readings-for-the-summer/" title="Previous Post: Readings for the Summer">&laquo; Readings for the Summer</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+
+
+
+      
+<a class="moot" title="Testing" href="http://api.moot.it/raejin//blog/2013/07/01/ec2-adventurous/#EC2 adventurous"></a>
+
+    </div>
+  </div>
+  <footer id="footer" role="contentinfo">
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
