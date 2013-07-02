@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "EC2 adventurous"
-date: 2013-07-01 19:13
+date: 2013-07-01 21:38
 comments: true
 categories:
 - geek
@@ -112,14 +112,11 @@ update_wc() {
 $ chmod +x post-update
 ```
 
-
-
-
-***
 Reference
 
 * [Setup git deploy for AWS ec2 Ubuntu instance](http://www.jeffhoefs.com/2012/09/setup-git-deploy-for-aws-ec2-ubuntu-instance/)
 * [StackOverflow - git-upload-pack: command not found, how to fix this correctly](http://stackoverflow.com/questions/225291/git-upload-pack-command-not-found-how-to-fix-this-correctly)
 * [Uploading Personal ssh Keys to Amazon EC2 ](http://alestic.com/2010/10/ec2-ssh-keys)
 * [Setting up Repo on Amazon EC2 for Git Push ](http://blog.gbinghan.com/2012/05/setting-up-repo-on-amazon-ec2-for-git.html)
+
 
