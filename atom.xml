@@ -4,7 +4,7 @@
   <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-07-16T22:09:20-07:00</updated>
+  <updated>2013-07-16T22:10:26-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[bloglovin]]></title>
-    <link href="http://raejin.github.com/blog/2013/07/16/bloglovin/"/>
-    <updated>2013-07-16T22:08:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/07/16/bloglovin</id>
-    <content type="html"><![CDATA[<p><a href="http://www.bloglovin.com/blog/9899343/?claim=mbaupjmucmd">Follow my blog with Bloglovin</a></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[EC2 adventurous]]></title>

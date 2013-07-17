@@ -4,7 +4,7 @@
   <title><![CDATA[Category: geek | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/geek/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-07-16T22:09:20-07:00</updated>
+  <updated>2013-07-16T22:10:26-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[bloglovin]]></title>
-    <link href="http://raejin.github.com/blog/2013/07/16/bloglovin/"/>
-    <updated>2013-07-16T22:08:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/07/16/bloglovin</id>
-    <content type="html"><![CDATA[<p><a href="http://www.bloglovin.com/blog/9899343/?claim=mbaupjmucmd">Follow my blog with Bloglovin</a></p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[EC2 adventurous]]></title>
@@ -244,6 +235,28 @@ $ cat someFile | comm -12 - anotherFile
 </code></p>
 
 <p>It’s the hyphen that makes this works beautifully! Who would have thought of using hyphen? Who?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Hex Color Picker for Mac]]></title>
+    <link href="http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac/"/>
+    <updated>2013-04-06T21:08:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac</id>
+    <content type="html"><![CDATA[<p>Whenever I need to decide a specific color to use, I always consult my sweet Photoshop CS6 since it runs pretty smooth on my laptop. But this is an overkill, opening up Photoshop simply for picking a color sounds so stupid and I’ve been doing this for years.</p>
+
+<p>Luckily, I stumble upon <a href="http://yuji.wordpress.com/2010/08/01/mac-adding-hex-color-picker-to-color-picker/">this article</a> about how to configure a light-weight hex color picker app on a Mac. Although the article clearly maps out all the steps, I am still presenting it here:</p>
+
+<ol>
+<li>Download <a href="http://wafflesoftware.net/hexpicker/">Hex Color Picker</a></li>
+<li>Open AppleScript Editor</li>
+<li>Write the desired app name i.e. <code>ColorPicker</code></li>
+<li>Save as a file with <code>.app</code> as file extension</li>
+<li>Move the file <code>HexColorPicker.colorPicker</code> to <code>~/Library/ColorPickers</code></li>
+</ol>
+
+
+<p>Simple, elegant, no more Photoshop :)</p>
 ]]></content>
   </entry>
   
