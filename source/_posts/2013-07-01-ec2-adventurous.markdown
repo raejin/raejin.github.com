@@ -18,7 +18,7 @@ Currently I am working on a project called "yolyo" (temporarily name), which is 
 
 First of all, I would like to thank BitNami providing one-click Discourse installation to deploy on EC2. Otherwise, I would've still struggled with all the nitty gritty deployment detail.
 
-# How to deploy/update by Git
+## How to deploy/update by Git
 This has confused me for a long while. I had been used to deploy virtually everything by drag and drop for so long. Though I've learnt how to use Git to do versioning, I do not know how to setup the cloud server so that I can simply do `git push origin master` to deploy the changes.
 
 Although I finally figured out how to use Git to deploy remote instance, I realized this workflow doesn't work really well with Discourse. Discourse itself already contains a git repo, so I would need to push to a remote repo and deploy the instance by pulling from this remote repo. (If anyone knows a better deployment strategy, please let me know)
@@ -26,16 +26,16 @@ Although I finally figured out how to use Git to deploy remote instance, I reali
 ## On remote machine
 create a git repo as a transition to deploy to a designated directory
 
-1. Copy local machine public key to the remote server (ec2 instance)
+- Copy local machine public key to the remote server (ec2 instance)
 ``` bash
 $ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com "cat >> ~/.ssh/authorized_keys"
 ```
-2. Create and initialize a new git repo
+- Create and initialize a new git repo
 ``` bash
 $ mkdir website.git && cd website.git
 $ git init --bare
 ```
-3. Configure the post-receive hook in order to put the files into desired directory
+- Configure the post-receive hook in order to put the files into desired directory
 ``` bash
 $ cat > hooks/post-receive
 #!/bin/sh
@@ -43,13 +43,13 @@ GIT_WORK_TREE=/home/ubuntu/website
 export GIT_WORK_TREE
 git checkout -f
 ```
-4. Make the post-receive file executable
+- Make the post-receive file executable
 
 ``` bash
 $ chmod +x hooks/post-receive
 ```
 
-5. Configure `hooks/post-update` file
+- Configure `hooks/post-update` file
 ``` bash
 #!/bin/sh
 #
@@ -107,12 +107,20 @@ update_wc() {
         if [ "$wc_dirty" -ne 0 -o "$index_dirty" -ne 0 ]
         then
 ```
-6. Make `hooks/post-update` executible
+- Make `hooks/post-update` executible
 ``` bash
 $ chmod +x post-update
 ```
 
-Reference
+## On local machine
+
+I'm lazy to explicitly write out the steps here. I will just refer to the [StackOverflow page](http://stackoverflow.com/questions/225291/git-upload-pack-command-not-found-how-to-fix-this-correctly) that helped me solve this problem.
+
+## Side note
+
+After all the above hassle I suddenly realized that I do not need any of these setup. Because I shall rely on a remote (e.q. GitHub) to host the repo, so the remote machine can easily pull from this remote repo. Though it is true that I am not currently working collaboratively with anybody else, this is a good deployment/development practice.
+
+###Reference
 
 * [Setup git deploy for AWS ec2 Ubuntu instance](http://www.jeffhoefs.com/2012/09/setup-git-deploy-for-aws-ec2-ubuntu-instance/)
 * [StackOverflow - git-upload-pack: command not found, how to fix this correctly](http://stackoverflow.com/questions/225291/git-upload-pack-command-not-found-how-to-fix-this-correctly)
