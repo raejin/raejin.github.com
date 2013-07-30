@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tools | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-07-16T22:10:26-07:00</updated>
+  <updated>2013-07-29T21:50:01-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -26,7 +26,7 @@
 
 <p>First of all, I would like to thank BitNami providing one-click Discourse installation to deploy on EC2. Otherwise, I would've still struggled with all the nitty gritty deployment detail.</p>
 
-<h1>How to deploy/update by Git</h1>
+<h2>How to deploy/update by Git</h2>
 
 <p>This has confused me for a long while. I had been used to deploy virtually everything by drag and drop for so long. Though I've learnt how to use Git to do versioning, I do not know how to setup the cloud server so that I can simply do <code>git push origin master</code> to deploy the changes.</p>
 
@@ -36,7 +36,7 @@
 
 <p>create a git repo as a transition to deploy to a designated directory</p>
 
-<ol>
+<ul>
 <li>Copy local machine public key to the remote server (ec2 instance)
 <code>bash
 $ cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/amazonKey.pem ubuntu@example.com "cat &gt;&gt; ~/.ssh/authorized_keys"
@@ -57,14 +57,14 @@ export GIT_WORK_TREE
 git checkout -f
 ```</p></li>
 <li>Make the post-receive file executable</li>
-</ol>
+</ul>
 
 
 <p><code>bash
 $ chmod +x hooks/post-receive
 </code></p>
 
-<ol>
+<ul>
 <li>Configure <code>hooks/post-update</code> file
 ``` bash
 
@@ -91,7 +91,7 @@ $ chmod +x hooks/post-receive
 #
 
 <h1>To enable this hook, make this file executable by "chmod +x post-update".</h1></li>
-</ol>
+</ul>
 
 
 <p>git update-server-info</p>
@@ -143,12 +143,20 @@ then</p>
 </code></pre>
 
 <p><code>
-6. Make `hooks/post-update` executible
+- Make `hooks/post-update` executible
 </code> bash
 $ chmod +x post-update
 ```</p>
 
-<p>Reference</p>
+<h2>On local machine</h2>
+
+<p>I'm lazy to explicitly write out the steps here. I will just refer to the <a href="http://stackoverflow.com/questions/225291/git-upload-pack-command-not-found-how-to-fix-this-correctly">StackOverflow page</a> that helped me solve this problem.</p>
+
+<h2>Side note</h2>
+
+<p>After all the above hassle I suddenly realized that I do not need any of these setup. Because I shall rely on a remote (e.q. GitHub) to host the repo, so the remote machine can easily pull from this remote repo. Though it is true that I am not currently working collaboratively with anybody else, this is a good deployment/development practice.</p>
+
+<h3>Reference</h3>
 
 <ul>
 <li><a href="http://www.jeffhoefs.com/2012/09/setup-git-deploy-for-aws-ec2-ubuntu-instance/">Setup git deploy for AWS ec2 Ubuntu instance</a></li>

@@ -4,7 +4,7 @@
   <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-07-16T22:10:26-07:00</updated>
+  <updated>2013-07-29T21:50:01-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[EC2 instance configuration note]]></title>
+    <link href="http://raejin.github.com/blog/2013/07/29/ec2-instance-configuration-note/"/>
+    <updated>2013-07-29T20:25:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/07/29/ec2-instance-configuration-note</id>
+    <content type="html"><![CDATA[<p>This post is intended to document the basic configuration I do for a typical EC2 Ubuntu instance, just want to make my life easier without googling the same thing all over again.</p>
+
+<h2>Setting up zsh</h2>
+
+<p><a href="http://paikialog.wordpress.com/2012/02/29/install-oh-my-zsh-on-ubuntu-ec2/">source</a></p>
+
+<ul>
+<li><code>sudo apt-get install zsh</code></li>
+<li><code>curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sudo sh</code></li>
+<li><code>sudo su</code></li>
+<li><code>chsh -s /bin/zsh ubuntu</code></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First month of AngularJS experience]]></title>
+    <link href="http://raejin.github.com/blog/2013/07/16/first-month-of-angularjs-experience/"/>
+    <updated>2013-07-16T23:29:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/07/16/first-month-of-angularjs-experience</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[EC2 adventurous]]></title>
@@ -26,7 +56,7 @@
 
 <p>First of all, I would like to thank BitNami providing one-click Discourse installation to deploy on EC2. Otherwise, I would&#8217;ve still struggled with all the nitty gritty deployment detail.</p>
 
-<h1>How to deploy/update by Git</h1>
+<h2>How to deploy/update by Git</h2>
 
 <p>This has confused me for a long while. I had been used to deploy virtually everything by drag and drop for so long. Though I&#8217;ve learnt how to use Git to do versioning, I do not know how to setup the cloud server so that I can simply do <code>git push origin master</code> to deploy the changes.</p>
 
@@ -36,9 +66,9 @@
 
 <p>create a git repo as a transition to deploy to a designated directory</p>
 
-<ol>
+<ul>
 <li>Copy local machine public key to the remote server (ec2 instance)</li>
-</ol>
+</ul>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -46,9 +76,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
+<ul>
 <li>Create and initialize a new git repo</li>
-</ol>
+</ul>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -58,9 +88,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
+<ul>
 <li>Configure the post-receive hook in order to put the files into desired directory</li>
-</ol>
+</ul>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -76,9 +106,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
+<ul>
 <li>Make the post-receive file executable</li>
-</ol>
+</ul>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -86,9 +116,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
+<ul>
 <li>Configure <code>hooks/post-update</code> file</li>
-</ol>
+</ul>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -204,9 +234,9 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<ol>
+<ul>
 <li>Make <code>hooks/post-update</code> executible</li>
-</ol>
+</ul>
 
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -214,7 +244,15 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Reference</p>
+<h2>On local machine</h2>
+
+<p>I&#8217;m lazy to explicitly write out the steps here. I will just refer to the <a href="http://stackoverflow.com/questions/225291/git-upload-pack-command-not-found-how-to-fix-this-correctly">StackOverflow page</a> that helped me solve this problem.</p>
+
+<h2>Side note</h2>
+
+<p>After all the above hassle I suddenly realized that I do not need any of these setup. Because I shall rely on a remote (e.q. GitHub) to host the repo, so the remote machine can easily pull from this remote repo. Though it is true that I am not currently working collaboratively with anybody else, this is a good deployment/development practice.</p>
+
+<h3>Reference</h3>
 
 <ul>
 <li><a href="http://www.jeffhoefs.com/2012/09/setup-git-deploy-for-aws-ec2-ubuntu-instance/">Setup git deploy for AWS ec2 Ubuntu instance</a></li>

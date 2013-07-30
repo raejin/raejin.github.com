@@ -4,13 +4,13 @@
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-  <title>Category: AngularJS - WATCH AND LEARN</title>
+  <title>EC2 instance configuration note - WATCH AND LEARN</title>
   <meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
   <meta name="author" content="Rae Liu">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   
-  <meta name="description" content="Category: AngularJS">
+  <meta name="description" content="This post is intended to document the basic configuration I do for a typical EC2 Ubuntu instance, just want to make my life easier without googling &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://raejin.github.comblog/categories/angularjs">
+  <link rel="canonical" href="http://raejin.github.com/blog/2013/07/29/ec2-instance-configuration-note">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css">
   <link href="/stylesheets/watch.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -94,35 +94,73 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: AngularJS</h1>
+    
+      <h1 class="entry-title">EC2 Instance Configuration Note</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+[ <time datetime="2013-07-29T20:25:00-07:00" pubdate data-updated="true">Jul 29, 2013</time> ] 
+
+[ Tags <span class="categories">
+  
+    <a class='category' href='/blog/categories/geek/'>geek</a>
+  
+</span> ]
+
+
+        
+      </p>
     
   </header>
-  
-  <div class="entry-content"><div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>This post is intended to document the basic configuration I do for a typical EC2 Ubuntu instance, just want to make my life easier without googling the same thing all over again.</p>
 
-  
-  <h2 class="blog-archives-year">2013</h2>
+<h2>Setting up zsh</h2>
 
-<article>
-  <time datetime="2013-07-16T23:29:00-07:00" pubdate>[ <span class='month'>Jul</span> <span class='day'>16</span> ]</time>
-<h1><a href="/blog/2013/07/16/first-month-of-angularjs-experience/">First month of AngularJS experience</a></h1>
-</article>
+<p><a href="http://paikialog.wordpress.com/2012/02/29/install-oh-my-zsh-on-ubuntu-ec2/">source</a></p>
 
-
-
-<article>
-  <time datetime="2013-05-19T21:14:00-07:00" pubdate>[ <span class='month'>May</span> <span class='day'>19</span> ]</time>
-<h1><a href="/blog/2013/05/19/readings-for-the-summer/">Readings for the Summer</a></h1>
-</article>
+<ul>
+<li><code>sudo apt-get install zsh</code></li>
+<li><code>curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sudo sh</code></li>
+<li><code>sudo su</code></li>
+<li><code>chsh -s /bin/zsh ubuntu</code></li>
+</ul>
 
 </div>
-</div>
+
+
+  <footer>
+    
+      <div class="sharing">
   
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/16/first-month-of-angularjs-experience/" title="Previous Post: First month of AngularJS experience">&laquo; First month of AngularJS experience</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
@@ -131,6 +169,8 @@
 
 
       
+<a class="moot" title="Testing" href="http://api.moot.it/raejin//blog/2013/07/29/ec2-instance-configuration-note/#EC2 instance configuration note"></a>
+
     </div>
   </div>
   <footer id="footer" role="contentinfo">
