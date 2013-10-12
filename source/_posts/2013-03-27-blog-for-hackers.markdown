@@ -32,5 +32,3 @@ for(var i = 0; i < aTags.length; i++) {
     });
 }
 ```
-
-{% gist 465698 %}
