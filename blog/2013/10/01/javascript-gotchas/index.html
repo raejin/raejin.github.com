@@ -4,13 +4,20 @@
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-  <title>SelfControl Saves My Final Grades - WATCH AND LEARN</title>
+  <title>JavaScript gotchas - WATCH AND LEARN</title>
   <meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
   <meta name="author" content="Rae Liu">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   
-  <meta name="description" content="Alright, I know the title is a bit off. I could’ve still suffered if I don’t study well enough to handle the finals. I’ve discovered a OSX &hellip;">
+  <meta name="description" content="How to use JavaScript declare class Using a function 1
+2
+3
+4
+5
+6
+7
+function Apple(type) { this.type = type; this.color = "red"; this.getInfo = &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +26,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://raejin.github.com/blog/2013/05/15/selfcontrol-saves-my-final-grades">
+  <link rel="canonical" href="http://raejin.github.com/blog/2013/10/01/javascript-gotchas">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css">
   <link href="/stylesheets/watch.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -98,7 +105,7 @@
   
   <header>
     
-      <h1 class="entry-title">SelfControl Saves My Final Grades</h1>
+      <h1 class="entry-title">JavaScript Gotchas</h1>
     
     
       <p class="meta">
@@ -114,11 +121,11 @@
   
 
 
-[ <time datetime="2013-05-15T21:13:00-07:00" pubdate data-updated="true">May 15, 2013</time> ] 
+[ <time datetime="2013-10-01T12:43:00-07:00" pubdate data-updated="true">Oct  1, 2013</time> ] 
 
 [ Tags <span class="categories">
   
-    <a class='category' href='/blog/categories/geek/'>geek</a>, <a class='category' href='/blog/categories/tools/'>tools</a>
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/geek/'>geek</a>
   
 </span> ]
 
@@ -129,11 +136,73 @@
   </header>
 
 
-<div class="entry-content"><p>Alright, I know the title is a bit off. I could’ve still suffered if I don’t study well enough to handle the finals. I’ve discovered a OSX application called SelfControl to prevent me from wondering on social websites occasionally for a period of time.</p>
+<div class="entry-content"><h2>How to use JavaScript declare class</h2>
 
-<p><a href="http://selfcontrolapp.com/">This app</a> is really awesome if you are the kind of person like me who lacks self-discipline whenever there is a need to focus. Well, mainly the reason is I don’t really like the material and it is hard in general, so that pushed me off from being proactive about the finals.</p>
+<ol>
+<li>Using a function</li>
+</ol>
 
-<p>Fortunately, this app is powerful enough to keep me from cracking the rules. It claims that after the rules are set, there is no way to break the rules even uninstalling the app. So there you have it! In case someone is looking for some help to get focused studying for exams.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>function Apple(type) {
+</span><span class='line'>    this.type = type;
+</span><span class='line'>    this.color = "red";
+</span><span class='line'>    this.getInfo = function () {
+</span><span class='line'>        return this.color;
+</span><span class='line'>    };
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Instantiate an object</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var apple = new Apple('macintosh);
+</span><span class='line'>apple.color = 'reddish';</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Declare instance method</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Apple.prototype.getInfo = function () {
+</span><span class='line'>    return this.color;
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Singleton - using object literal</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var apple = {
+</span><span class='line'>    type: 'hey',
+</span><span class='line'>    color: 'blue',
+</span><span class='line'>    getInfo: function () {
+</span><span class='line'>        return this.color;
+</span><span class='line'>    }
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
+
 </div>
 
 
@@ -148,10 +217,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/04/25/how-long-does-it-take-a-noob-to-master-unix-commands/" title="Previous Post: How Long Does It Take a Noob to Master UNIX Commands?">&laquo; How Long Does It Take a Noob to Master UNIX Commands?</a>
+        <a class="basic-alignment left" href="/blog/2013/07/29/ec2-instance-configuration-note/" title="Previous Post: EC2 instance configuration note">&laquo; EC2 instance configuration note</a>
       
       
-        <a class="basic-alignment right" href="/blog/2013/05/19/readings-for-the-summer/" title="Next Post: Readings for the Summer">Readings for the Summer &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013/10/04/rails-journey/" title="Next Post: Rails journey">Rails journey &raquo;</a>
       
     </p>
   </footer>
@@ -163,7 +232,7 @@
 
 
       
-<a class="moot" title="Testing" href="http://api.moot.it/raejin//blog/2013/05/15/selfcontrol-saves-my-final-grades/#SelfControl Saves My Final Grades"></a>
+<a class="moot" title="Testing" href="http://api.moot.it/raejin//blog/2013/10/01/javascript-gotchas/#JavaScript gotchas"></a>
 
     </div>
   </div>

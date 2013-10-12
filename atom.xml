@@ -4,7 +4,7 @@
   <title><![CDATA[WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-07-29T21:57:59-07:00</updated>
+  <updated>2013-10-12T10:58:49-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,6 +12,98 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Rails journey]]></title>
+    <link href="http://raejin.github.com/blog/2013/10/04/rails-journey/"/>
+    <updated>2013-10-04T13:26:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/10/04/rails-journey</id>
+    <content type="html"><![CDATA[<h2>How to debug Rails</h2>
+
+<h3>Instrumentation</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> = debug(@movie)
+</span><span class='line'> logger.debug(@movie.inspect)</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript gotchas]]></title>
+    <link href="http://raejin.github.com/blog/2013/10/01/javascript-gotchas/"/>
+    <updated>2013-10-01T12:43:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/10/01/javascript-gotchas</id>
+    <content type="html"><![CDATA[<h2>How to use JavaScript declare class</h2>
+
+<ol>
+<li>Using a function</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>function Apple(type) {
+</span><span class='line'>    this.type = type;
+</span><span class='line'>    this.color = "red";
+</span><span class='line'>    this.getInfo = function () {
+</span><span class='line'>        return this.color;
+</span><span class='line'>    };
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Instantiate an object</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var apple = new Apple('macintosh);
+</span><span class='line'>apple.color = 'reddish';</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Declare instance method</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Apple.prototype.getInfo = function () {
+</span><span class='line'>    return this.color;
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Singleton - using object literal</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var apple = {
+</span><span class='line'>    type: 'hey',
+</span><span class='line'>    color: 'blue',
+</span><span class='line'>    getInfo: function () {
+</span><span class='line'>        return this.color;
+</span><span class='line'>    }
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[EC2 instance configuration note]]></title>
@@ -418,12 +510,6 @@
 </span><span class='line'>    <span class="p">});</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<div><script src='https://gist.github.com/465698.js'></script>
-<noscript><pre><code></code></pre></noscript></div>
 
 ]]></content>
   </entry>

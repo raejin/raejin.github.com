@@ -4,13 +4,13 @@
 <!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
-  <title>關於起點 - WATCH AND LEARN</title>
+  <title>WATCH AND LEARN</title>
   <meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
   <meta name="author" content="Rae Liu">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   
-  <meta name="description" content="我一時之間也不知道該從何寫起，有些想法在腦海裡複誦久了反而不知道怎麼好好地用文字來表達。 關於這個部落格，我想要將它定位成我學習寫程式的記錄，也算是為自己未來的事業開始打草稿。並不覺得我會變成怎樣出眾的人物，但我希望能夠留下些什麼，並且和我有同樣想法的人一起交流。我想要做的事情很多，但在那之前， &hellip;">
+  <meta name="description" content="Why am I switching the blogging platform? It sounds like an annual routine that has been done over and over again in the blogging business. I remeber &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://raejin.github.com/blog/2013/03/13/a-new-start">
+  <link rel="canonical" href="http://raejin.github.com/blog/page/2">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css">
   <link href="/stylesheets/watch.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -93,12 +93,94 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article class="hentry" role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
     
-      <h1 class="entry-title">關於起點</h1>
+      <h1 class="entry-title"><a href="/blog/2013/03/27/blog-for-hackers/">Blog for Hackers?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+[ <time datetime="2013-03-27T18:43:00-07:00" pubdate data-updated="true">Mar 27, 2013</time> ] 
+
+[ Tags <span class="categories">
+  
+    <a class='category' href='/blog/categories/hack/'>hack</a>
+  
+</span> ]
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Why am I switching the blogging platform? It sounds like an annual routine that has been done over and over again in the blogging business. I remeber the first time I was introduced with Wordpress, awesome and highly customizable. Although it was a hassle to get things work with Wordpress, the urge to personalize my blog made me step out of my comfort zone.</p>
+
+<p>This time is no different than the first time. The reason why I am switching is actually very silly. I&#8217;ve seen so many cool developers using Octopress to blog, and they made it look really awesome due to the fact that Octopress is easy to hack. Octopress claimed it inteded to be used by hackers only, since everything needs to be done in terminal with no exception. Its nature will potentially scare off regular users, so this makes using Octopress even cooler. Yeah, that&#8217;s why I am switching, because I want to pretend that I am a cool hacker, which I am really not.</p>
+
+<p>Enough for my boring mumbling, let me tell you what I did in the past few hours.</p>
+
+<ul>
+<li>Replace default code syntax highlighter with my favorite <a href="https://github.com/chriskempson/tomorrow-theme">Tomorrow Night theme</a></li>
+<li>Clean up the default template</li>
+<li>Learn the damn markdown</li>
+<li>Host on GitHub page</li>
+<li>Discover <a href="https://github.com/tommy351/hexo">Hexo</a>, after I spent hours figuring out how to get things work in Octopress</li>
+<li>Think about responsive design with regard to the blog</li>
+</ul>
+
+
+<p>This experience opens a door for me. Though I know getting this done is trivial, the process of learning will always lead to different chapters.</p>
+
+<p>For those that would like to know <code>the syntax highlighter theme</code>, here is the demo. Notice that it does not entirely follow the syntax theming scheme in Tomorrow Night since the setup is a bit different. Also I haven&#8217;t tested out all the coloring scheme yet, this is still under-development. However, feel free to <a href="https://gist.github.com/raejin/5267644">use it and modify the .css file</a> to make it better.</p>
+
+<figure class='code'><figcaption><span>demo.js</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">aTags</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">aTags</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">aTags</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">onclick</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="kd">var</span> <span class="nx">closureVar</span> <span class="o">=</span> <span class="nx">i</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">closureVar</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/13/a-new-start/">關於起點</a></h1>
     
     
       <p class="meta">
@@ -129,7 +211,7 @@
   </header>
 
 
-<div class="entry-content"><p>我一時之間也不知道該從何寫起，有些想法在腦海裡複誦久了反而不知道怎麼好好地用文字來表達。</p>
+  <div class="entry-content"><p>我一時之間也不知道該從何寫起，有些想法在腦海裡複誦久了反而不知道怎麼好好地用文字來表達。</p>
 
 <p>關於這個部落格，我想要將它定位成我學習寫程式的記錄，也算是為自己未來的事業開始打草稿。並不覺得我會變成怎樣出眾的人物，但我希望能夠留下些什麼，並且和我有同樣想法的人一起交流。我想要做的事情很多，但在那之前，我必須把我的草稿給打好。先把路給走好了，才能試試看可不可以飛。</p>
 
@@ -143,34 +225,21 @@
 
 <p>但以我的能力我能說的事情太少了，現在我只能多看多作多學，WATCH AND LEARN</p>
 </div>
+  
+  
 
 
-  <footer>
+    </article>
+  
+  <div class="pagination">
     
-      <div class="sharing">
-  
-  
-  
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
 </div>
 
-    
-    <p class="meta">
       
-      
-        <a class="basic-alignment right" href="/blog/2013/03/27/blog-for-hackers/" title="Next Post: Blog for hackers?">Blog for hackers? &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-
-</div>
-
-
-
-
-      
-<a class="moot" title="Testing" href="http://api.moot.it/raejin//blog/2013/03/13/a-new-start/#關於起點"></a>
-
     </div>
   </div>
   <footer id="footer" role="contentinfo">
