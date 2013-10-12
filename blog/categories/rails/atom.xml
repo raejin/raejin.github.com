@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails | WATCH AND LEARN]]></title>
+  <link href="http://raejin.github.com/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://raejin.github.com/"/>
+  <updated>2013-10-12T10:53:21-07:00</updated>
+  <id>http://raejin.github.com/</id>
+  <author>
+    <name><![CDATA[Rae Liu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Rails journey]]></title>
+    <link href="http://raejin.github.com/blog/2013/10/04/rails-journey/"/>
+    <updated>2013-10-04T13:26:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/10/04/rails-journey</id>
+    <content type="html"><![CDATA[<h2>How to debug Rails</h2>
+
+<h3>Instrumentation</h3>
+
+<p><code>
+ = debug(@movie)
+ logger.debug(@movie.inspect)
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | WATCH AND LEARN]]></title>
   <link href="http://raejin.github.com/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
-  <updated>2013-07-29T21:57:59-07:00</updated>
+  <updated>2013-10-12T10:53:21-07:00</updated>
   <id>http://raejin.github.com/</id>
   <author>
     <name><![CDATA[Rae Liu]]></name>
@@ -12,6 +12,75 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript gotchas]]></title>
+    <link href="http://raejin.github.com/blog/2013/10/01/javascript-gotchas/"/>
+    <updated>2013-10-01T12:43:00-07:00</updated>
+    <id>http://raejin.github.com/blog/2013/10/01/javascript-gotchas</id>
+    <content type="html"><![CDATA[<h2>How to use JavaScript declare class</h2>
+
+<ol>
+<li>Using a function</li>
+</ol>
+
+
+<p>```
+function Apple(type) {</p>
+
+<pre><code>this.type = type;
+this.color = "red";
+this.getInfo = function () {
+    return this.color;
+};
+</code></pre>
+
+<p>}
+```</p>
+
+<ul>
+<li>Instantiate an object</li>
+</ul>
+
+
+<p><code>
+var apple = new Apple('macintosh);
+apple.color = 'reddish';
+</code></p>
+
+<ul>
+<li>Declare instance method</li>
+</ul>
+
+
+<p>```
+Apple.prototype.getInfo = function () {</p>
+
+<pre><code>return this.color;
+</code></pre>
+
+<p>};
+```</p>
+
+<ul>
+<li>Singleton - using object literal</li>
+</ul>
+
+
+<p>```
+var apple = {</p>
+
+<pre><code>type: 'hey',
+color: 'blue',
+getInfo: function () {
+    return this.color;
+}
+</code></pre>
+
+<p>};
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Readings for the Summer]]></title>

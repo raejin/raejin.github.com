@@ -43,6 +43,14 @@
         <lastmod>2013-07-29T21:49:12-07:00</lastmod>
     </url>
     <url>
+        <loc>http://raejin.github.com/blog/2013/10/01/javascript-gotchas/</loc>
+        <lastmod>2013-10-01T12:44:35-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://raejin.github.com/blog/2013/10/04/rails-journey/</loc>
+        <lastmod>2013-10-04T14:08:04-07:00</lastmod>
+    </url>
+    <url>
         <loc>http://raejin.github.com/404.html</loc>
         <lastmod>2013-07-01T21:07:42-07:00</lastmod>
     </url>
@@ -52,7 +60,7 @@
     </url>
     <url>
         <loc>http://raejin.github.com/blog/archives/</loc>
-        <lastmod>2013-07-29T21:49:12-07:00</lastmod>
+        <lastmod>2013-10-04T14:08:04-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/discuss/</loc>
@@ -60,7 +68,7 @@
     </url>
     <url>
         <loc>http://raejin.github.com/</loc>
-        <lastmod>2013-07-29T21:49:12-07:00</lastmod>
+        <lastmod>2013-10-04T14:08:04-07:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/robots.txt</loc>
