@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <title>Parameter list or curry style? - WATCH AND LEARN</title>
+  <meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
+  <meta name="author" content="Rae Liu">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  
+  <meta name="description" content="I&#8217;ve been playing with Scala at work here and there, but never gotten a chance to explore some of its interesting aspects until recently. I&# &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://raejin.github.com/blog/2014/11/23/parameter-list-or-curry-style">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/watch.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="//cdn.moot.it/1/moot.css" />
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+  <link href="//fonts.googleapis.com/css?family=Averia+Sans+Libre|Noto+Sans|Arbutus+Slab|Amethysta" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="WATCH AND LEARN" type="application/atom+xml">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/javascripts/wal.js" type="text/javascript"></script>
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <script src="//cdn.moot.it/latest/moot.min.js"></script>
+  
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39687126-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><aside class="botm">
+  <ul>
+    <li><a href="/about">/about</a></li>
+    <li><a href="/blog/archives">/archives</a></li>
+    <li><a href="//twitter.com/liuraejin">/twitter</a></li>
+    <li><a href="//github.com/raejin">/github</a></li>
+  </ul>
+</aside>
+<aside class="lft">
+  <ul>
+    <li><a href="/discuss">/discuss</a></li>
+  </ul>
+</aside>
+<hgroup>
+  <h1><a href="/">WATCH AND LEARN</a></h1>
+  
+    <h2>I learn by doing and seeing</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:raejin.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Parameter List or Curry Style?</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+[ <time datetime="2014-11-23T22:44:00-08:00" pubdate data-updated="true">Nov 23, 2014</time> ] 
+
+[ Tags <span class="categories">
+  
+    <a class='category' href='/blog/categories/geek/'>geek</a>, <a class='category' href='/blog/categories/scala/'>scala</a>
+  
+</span> ]
+
+
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I&#8217;ve been playing with Scala at work here and there, but never gotten a chance to explore some of its interesting aspects until recently.</p>
+
+<p>I&#8217;ve seen some Scala code that is using implicit variables here and there, noticing there are two ways a function can be declared with parameters.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">def</span> <span class="n">somefunction</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">String</span><span class="o">)(</span><span class="k">implicit</span> <span class="n">c</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+</span><span class='line'><span class="k">def</span> <span class="n">somefunction</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">c</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>So when do you use one over the other? What&#8217;s the advantages of using one or the other? This StackOverflow post <a href="http://stackoverflow.com/questions/6803211/whats-the-difference-between-multiple-parameters-lists-and-multiple-parameters">What&#8217;s the difference between multiple parameters lists and multiple parameters per list in Scala?</a> gave me a satisfying answer. I&#8217;d like to rephrase it myself here just so I can remember it better. Or else the link would do the job at explaining.</p>
+
+<p>The answer went over couple of programming concept worth mentioning, I will briefly reiterate over the main points in my own words:</p>
+
+<ul>
+<li>Partial function</li>
+<li><a href="http://stackoverflow.com/questions/8650549/using-partial-functions-in-scala-how-does-it-work/8650639#8650639">Partially applied function</a></li>
+<li>Currying</li>
+</ul>
+
+
+<h2>Partial function</h2>
+
+<p>A kind of function that is only applicable to certain input values. Partial function can be useful for error detection, and knows how to deal with invalid inputs. The emphasis is that partial function will do something else if an input is not accepted.</p>
+
+<h2>Partially applied function</h2>
+
+<p>A function that has been partially applied. Say if a function requires two parameters, we can only apply the first one but leave the second one. Later on we can apply this <code>partially applied function</code> with the second argument.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">def</span> <span class="n">dividedBy</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span> <span class="o">}</span>
+</span><span class='line'><span class="k">val</span> <span class="n">tenDividedBy</span> <span class="k">=</span> <span class="n">dividedBy</span><span class="o">(</span><span class="mi">10</span><span class="o">,</span> <span class="k">_:</span> <span class="kt">Int</span><span class="o">)</span>
+</span><span class='line'><span class="n">tenDividedBy</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span> <span class="c1">// should be 1</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Currying</h2>
+
+<p>It could easily be confused with partially applied function. I&#8217;d like to think of currying as a subset of partially applied function. We decompose a function with multiple parameters into a chain of functions taking one argument at a time.</p>
+
+<h1>So, what&#8217;s the difference?</h1>
+
+<ul>
+<li>Passing a block in a function can be syntactically concise</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">def</span> <span class="n">eachOfMap</span><span class="o">(</span><span class="n">m</span><span class="k">:</span> <span class="kt">Map</span><span class="o">[</span><span class="kt">String</span>, <span class="kt">Int</span><span class="o">])(</span><span class="n">fn</span><span class="k">:</span> <span class="o">((</span><span class="kt">String</span><span class="o">,</span> <span class="kt">Int</span><span class="o">))</span> <span class="k">=&gt;</span> <span class="nc">Unit</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">m</span><span class="o">.</span><span class="n">foreach</span><span class="o">(</span><span class="n">fn</span><span class="o">)</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="k">val</span> <span class="n">aMap</span> <span class="k">=</span> <span class="nc">Map</span><span class="o">(</span><span class="s">&quot;a&quot;</span> <span class="o">-&gt;</span> <span class="mi">1</span><span class="o">,</span> <span class="s">&quot;b&quot;</span> <span class="o">-&gt;</span> <span class="mi">2</span><span class="o">,</span> <span class="s">&quot;c&quot;</span> <span class="o">-&gt;</span> <span class="mi">3</span><span class="o">)</span>
+</span><span class='line'><span class="n">eachOfMap</span><span class="o">(</span><span class="n">aMap</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>    <span class="k">case</span> <span class="o">(</span><span class="n">str</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">in</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span>
+</span><span class='line'>        <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">&quot;$str, $in&quot;</span><span class="o">)</span>
+</span><span class='line'><span class="o">}</span>
+</span><span class='line'><span class="c1">// a, 1</span>
+</span><span class='line'><span class="c1">// b, 2</span>
+</span><span class='line'><span class="c1">// c, 3</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Referring to an argument from previous parameters</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='scala'><span class='line'><span class="k">def</span> <span class="n">getKeysFirst</span><span class="o">(</span><span class="n">m</span><span class="k">:</span> <span class="kt">Map</span><span class="o">[</span><span class="kt">String</span>, <span class="kt">Int</span><span class="o">])(</span><span class="n">k</span><span class="k">:</span> <span class="kt">Iterable</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">m</span><span class="o">.</span><span class="n">keys</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">k</span><span class="o">.</span><span class="n">foreach</span><span class="o">(</span><span class="n">println</span><span class="o">(</span><span class="k">_</span><span class="o">))</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Implicit variable cannot co-exist with regular parameters unless with multiple parameter lists</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/04/rails-journey/" title="Previous Post: Rails journey">&laquo; Rails journey</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+
+
+
+      
+<a class="moot" title="Testing" href="http://api.moot.it/raejin//blog/2014/11/23/parameter-list-or-curry-style/#Parameter list or curry style?"></a>
+
+    </div>
+  </div>
+  <footer id="footer" role="contentinfo">
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

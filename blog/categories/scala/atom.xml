@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: geek | WATCH AND LEARN]]></title>
-  <link href="http://raejin.github.com/blog/categories/geek/atom.xml" rel="self"/>
+  <title><![CDATA[Category: scala | WATCH AND LEARN]]></title>
+  <link href="http://raejin.github.com/blog/categories/scala/atom.xml" rel="self"/>
   <link href="http://raejin.github.com/"/>
   <updated>2014-12-06T02:35:53-08:00</updated>
   <id>http://raejin.github.com/</id>
@@ -101,121 +101,6 @@ def getKeysFirst(m: Map[String, Int])(k: Iterable[String] = m.keys) = {</p>
 <li>Implicit variable cannot co-exist with regular parameters unless with multiple parameter lists</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Rails journey]]></title>
-    <link href="http://raejin.github.com/blog/2013/10/04/rails-journey/"/>
-    <updated>2013-10-04T13:26:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/10/04/rails-journey</id>
-    <content type="html"><![CDATA[<h2>How to debug Rails</h2>
-
-<h3>Instrumentation</h3>
-
-<p><code>
- = debug(@movie)
- logger.debug(@movie.inspect)
-</code></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[JavaScript gotchas]]></title>
-    <link href="http://raejin.github.com/blog/2013/10/01/javascript-gotchas/"/>
-    <updated>2013-10-01T12:43:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/10/01/javascript-gotchas</id>
-    <content type="html"><![CDATA[<h2>How to use JavaScript declare class</h2>
-
-<ol>
-<li>Using a function</li>
-</ol>
-
-
-<p>```
-function Apple(type) {</p>
-
-<pre><code>this.type = type;
-this.color = "red";
-this.getInfo = function () {
-    return this.color;
-};
-</code></pre>
-
-<p>}
-```</p>
-
-<ul>
-<li>Instantiate an object</li>
-</ul>
-
-
-<p><code>
-var apple = new Apple('macintosh);
-apple.color = 'reddish';
-</code></p>
-
-<ul>
-<li>Declare instance method</li>
-</ul>
-
-
-<p>```
-Apple.prototype.getInfo = function () {</p>
-
-<pre><code>return this.color;
-</code></pre>
-
-<p>};
-```</p>
-
-<ul>
-<li>Singleton - using object literal</li>
-</ul>
-
-
-<p>```
-var apple = {</p>
-
-<pre><code>type: 'hey',
-color: 'blue',
-getInfo: function () {
-    return this.color;
-}
-</code></pre>
-
-<p>};
-```</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[EC2 instance configuration note]]></title>
-    <link href="http://raejin.github.com/blog/2013/07/29/ec2-instance-configuration-note/"/>
-    <updated>2013-07-29T20:25:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/07/29/ec2-instance-configuration-note</id>
-    <content type="html"><![CDATA[<p>This post is intended to document the basic configuration I do for a typical EC2 Ubuntu instance, just want to make my life easier without googling the same thing all over again.</p>
-
-<h2>Setting up zsh</h2>
-
-<p><a href="http://paikialog.wordpress.com/2012/02/29/install-oh-my-zsh-on-ubuntu-ec2/">source</a></p>
-
-<ul>
-<li><code>sudo apt-get install zsh</code></li>
-<li><code>curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sudo sh</code></li>
-<li><code>sudo su</code></li>
-<li><code>chsh -s /bin/zsh ubuntu</code></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[First month of AngularJS experience]]></title>
-    <link href="http://raejin.github.com/blog/2013/07/16/first-month-of-angularjs-experience/"/>
-    <updated>2013-07-16T23:29:00-07:00</updated>
-    <id>http://raejin.github.com/blog/2013/07/16/first-month-of-angularjs-experience</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   

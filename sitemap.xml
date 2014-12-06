@@ -2,76 +2,80 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://raejin.github.com/blog/2013/03/13/a-new-start/</loc>
-        <lastmod>2013-07-01T21:07:42-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/03/27/blog-for-hackers/</loc>
-        <lastmod>2013-10-12T10:58:23-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/04/06/hex-color-picker-for-mac/</loc>
-        <lastmod>2013-07-01T21:10:32-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/04/06/internship-for-summer-2013/</loc>
-        <lastmod>2013-07-01T21:11:44-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>
             http://raejin.github.com/blog/2013/04/25/how-long-does-it-take-a-noob-to-master-unix-commands/
         </loc>
-        <lastmod>2013-07-01T21:55:03-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/05/15/selfcontrol-saves-my-final-grades/</loc>
-        <lastmod>2013-07-01T21:14:02-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/05/19/readings-for-the-summer/</loc>
-        <lastmod>2013-07-01T21:19:12-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/07/01/ec2-adventurous/</loc>
-        <lastmod>2013-07-16T23:27:36-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/07/16/first-month-of-angularjs-experience/</loc>
-        <lastmod>2013-07-16T23:29:56-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/07/29/ec2-instance-configuration-note/</loc>
-        <lastmod>2013-07-29T21:49:12-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/10/01/javascript-gotchas/</loc>
-        <lastmod>2013-10-01T12:44:35-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/2013/10/04/rails-journey/</loc>
-        <lastmod>2013-10-04T14:08:04-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://raejin.github.com/blog/2014/11/23/parameter-list-or-curry-style/</loc>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/404.html</loc>
-        <lastmod>2013-07-01T21:07:42-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/about/</loc>
-        <lastmod>2013-07-01T21:07:42-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/blog/archives/</loc>
-        <lastmod>2013-10-12T10:58:23-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/discuss/</loc>
-        <lastmod>2013-07-01T21:07:42-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/</loc>
-        <lastmod>2013-10-12T10:58:23-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
     <url>
         <loc>http://raejin.github.com/robots.txt</loc>
-        <lastmod>2013-07-01T21:07:42-07:00</lastmod>
+        <lastmod>2014-12-06T02:33:01-08:00</lastmod>
     </url>
 </urlset>
